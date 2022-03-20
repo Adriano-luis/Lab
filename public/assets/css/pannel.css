@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+
+#home .main-pannel{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 10em;
+    width: 100%;
+    max-width:400px;
+    margin: 0 auto;
+    background-color: #0C026B;
+    border-radius: 50px 5px 50px 5px;
+    align-items: center;
+    color: #fff;
+}
+
+#home .main-pannel > img{
+    width: 100%;
+    max-width:90px;
+    margin: 20px auto;
+}
