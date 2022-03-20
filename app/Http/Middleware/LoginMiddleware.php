@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;
 
 class LoginMiddleware
 {

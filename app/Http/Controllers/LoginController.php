@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
-use illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
@@ -35,7 +35,7 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
         $remember = $request->only('remember');
 
-        if(Auth::attempt($credentials,$remember)){
+        if(auth::attempt($credentials,$remember)){
             return redirect()->intended('panel');
         }
 
