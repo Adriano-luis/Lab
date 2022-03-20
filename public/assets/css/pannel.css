@@ -21,3 +21,15 @@
     max-width:90px;
     margin: 20px auto;
 }
+
+#blog .couter-articles{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 0px 0px;
+}
+
+#blog .couter-articles > b{
+    width: 30px;
+    text-align: center;
+    border-bottom: 1px solid #0C026B;
+}

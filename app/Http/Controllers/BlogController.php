@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BlogController extends Controller
 {
@@ -14,7 +15,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        //
+       $articles =  auth::user()->blogs()->paginate(10);
+        return view('pannel.blog',['articles' => $articles]);
     }
 
     /**
