@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/login', 'LoginController@index')->name('login-get');
+Route::get('/login', 'LoginController@index')->name('login');
 Route::post('/login', 'LoginController@authenticate')->name('login-post');
 
-Route::get('/new-user', 'UserController@new')->name('new-user-get');
+Route::get('/new-user', 'UserController@new')->name('new-user');
 Route::post('/new-user', 'UserController@save')->name('new-user-post');
 
 Route::middleware('login')->prefix('panel')->group(function(){
@@ -24,5 +24,5 @@ Route::middleware('login')->prefix('panel')->group(function(){
     
     Route::resource('/services', 'ServiceController');
     Route::resource('/blogs', 'BlogController');
-    Route::get('/logout','LoginController@logout')->name('logout');
+    Route::post('/logout','LoginController@logout')->name('logout');
 });
