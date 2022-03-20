@@ -1,43 +1,52 @@
 @extends('adminlte::page')
 @section('content')
-    @if ($editar)
-      <form action="{{route('imprensa.update',$imprensa->id)}}" method="POST" enctype="multipart/form-data">
+    @if ($edit)
+      <form action="{{route('imprensa.update',$article->id)}}" method="POST" enctype="multipart/form-data">
     @method('PUT')
     @else
-        <form action="{{route('imprensa.store')}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('blogs.store')}}" method="POST" enctype="multipart/form-data">
     @endif
         @csrf
         <div class="form-group">
             <label for="titulo-imprensa">Titulo</label>
-            <input maxlength="53" type="text" class="form-control" id="titulo-imprensa" aria-describedby="titulo" placeholder="Digite o titulo" name="titulo" value="{{isset($imprensa->titulo) ? $imprensa->titulo: '' }}">
-            {{ $errors->first('titulo') ? $errors->first('titulo') : '' }}
+            <input maxlength="53" type="text" class="form-control" id="titulo-imprensa" aria-describedby="titulo" placeholder="Digite o titulo" name="title" value="{{isset($article->title) ? $article->title: '' }}">
+            {{ $errors->first('title') ? $errors->first('title') : '' }}
           </div>
           <div class="form-group">
             <label for="imagem-imprensa">Imagem da imprensa</label>
                 <div class="input-group">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="upFoto" id="imagem-imprensa">
+                        <input type="file" class="custom-file-input" name="image" id="imagem-imprensa">
                         <label name="upFotos" class="custom-file-label" for="imagem-imprensa">
                             Click para procurar em seu dispositivo Tam: 920 x 575
                         </label>
                     </div>
                 </div>
-                {{ $errors->first('upFoto') ? $errors->first('upFoto') : '' }}
+                {{ $errors->first('image') ? $errors->first('image') : '' }}
+          </div>
+          <div class="form-group">
+            <label for="alt-img">Alt da imagem</label>
+            <input type="text" class="form-control" id="alt-img" aria-describedby="alt" placeholder="Digite a tag alt da imagem" name="image_alt" value="{{isset($article->image_alt) ? $article->image_alt : ''}}">
+            {{ $errors->first('image_alt') ? $errors->first('image_alt') : '' }}
+            
+            <label for="title-img">Title da imagem</label>
+            <input type="text" class="form-control" id="title-img" aria-describedby="autor" placeholder="Digite a tag Title da imagem" name="image_title" value="{{isset($article->image_title) ? $article->image_title : ''}}">
+            {{ $errors->first('image_title') ? $errors->first('image_title') : '' }}
           </div>
           <div class="form-group">
             <label for="resumo-imprensa">Resumo</label>
-            <textarea maxlength="87" type="text" class="form-control resumo-completo" id="resumo-imprensa" placeholder="Digite o resumo" name="resumo">{{isset($imprensa->resumo)? $imprensa->resumo : ''}}</textarea>
-            {{ $errors->first('resumo') ? $errors->first('resumo') : '' }}
+            <textarea maxlength="87" type="text" class="form-control resumo-completo" id="resumo-imprensa" placeholder="Digite o resumo" name="description">{{isset($article->description)? $article->description : ''}}</textarea>
+            {{ $errors->first('description') ? $errors->first('description') : '' }}
           </div>
           <div class="form-group">
             <label for="texto-imprensa">Texto completo</label>
-            <textarea type="text" class="form-control texto-completo" id="texto-imprensa" placeholder="Digite o texto completo" name="texto">{{isset($imprensa->textoCompleto)? $imprensa->textoCompleto : ''}}</textarea>
-            {{ $errors->first('texto') ? $errors->first('texto') : '' }}
+            <textarea type="text" class="form-control texto-completo" id="texto-imprensa" placeholder="Digite o texto completo" name="text">{{isset($article->text)? $article->text : ''}}</textarea>
+            {{ $errors->first('text') ? $errors->first('text') : '' }}
           </div>
           <div class="form-group">
             <label for="autor-imprensa">Autor</label>
-            <input type="text" class="form-control" id="autor-imprensa" aria-describedby="autor" placeholder="Digite o nome do autor" name="autor" value="{{isset($imprensa->autor) ? $imprensa->autor : ''}}">
-            {{ $errors->first('autor') ? $errors->first('autor') : '' }}
+            <input type="text" class="form-control" id="autor-imprensa" aria-describedby="autor" placeholder="Digite o nome do autor" name="author" value="{{isset($article->author) ? $article->author : ''}}">
+            {{ $errors->first('author') ? $errors->first('author') : '' }}
           </div>
           <button type="submit" class="btn btn-success">Salvar</button>
     </form>
@@ -92,7 +101,4 @@
         mentions_item_type: 'profile'
       });
     </script>
-@endsection
-@section('css')
-<link rel="stylesheet" type="text/css" href="{{asset('assets/css/template.css')}}"/>
 @endsection

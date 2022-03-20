@@ -18,7 +18,7 @@ class CreateServicesTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('title');
             $table->string('description');
-            $table->string('number');
+            $table->string('phone');
             $table->string('image');
             $table->string('extra1');
             $table->timestamps();

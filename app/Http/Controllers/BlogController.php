@@ -26,7 +26,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('pannel.blog-edit', ['edit' => false]);
     }
 
     /**
@@ -37,7 +37,33 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rules = [
+            'title' => 'required',
+            'image' => 'required',
+            'text' => 'required',
+        ];
+        $feedback = [
+            'required' => 'Você precisa me preencher!' 
+        ];
+
+        $request->validate($rules,$feedback);
+
+        $image = $request->file('image');
+        $image_urn = $image->store('images/articles','public');
+
+        Blog::create([
+            'user_id' => Auth::user()->id,
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $image_urn,
+            'image_title' => $request->image_title,
+            'image_alt' => $request->image_alt,
+            'text' => $request->text,
+            'author' => $request->author
+        ]);
+
+        $article = Blog::orderBy('created_at', 'desc')->get()->first();
+        return redirect()->route('blogs.show',['blog' => $article->id]);
     }
 
     /**
