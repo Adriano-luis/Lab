@@ -60,6 +60,8 @@
             </li>
         @endif
 
+        <li>teste</li>
+
         {{-- User menu footer --}}
         <li class="user-footer">
             @if($profile_url)
