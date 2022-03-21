@@ -35,7 +35,7 @@ class LoginController extends Controller
         $remember = $request->only('remember');
 
         if(auth::attempt($credentials,$remember)){
-            return redirect()->intended('panel');
+            return redirect()->intended('pannel');
         }
 
         return redirect()->route('login',['erro' => 1]);

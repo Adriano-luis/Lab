@@ -3,11 +3,6 @@
     <section id="pannel-show">
         <div class="editar">
             <a href="{{route('blogs.edit',$article->id)}}"><button class="btn btn-success">Editar</button></a>
-            <form action="{{route('blogs.destroy',$article->id)}}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button onclick="return confirm('Tem certeza que gostaria de deletar essa matéria?')" class="btn btn-danger">Excluir</button>
-            </form>
         </div>
         <div style="margin: auto; margin-left:28px">
             <div class=" col financial-sombra">
