@@ -16,7 +16,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-       $articles =  auth::user()->blogs()->orderBy('id','desc')->paginate(10);
+       $articles =  auth::user()->blogs()->paginate(10);
         return view('pannel.blog',['articles' => $articles]);
     }
 
@@ -27,8 +27,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //return redirect()->back();
-        return view('pannel.blog-edit', ['edit' => false]);
+        return redirect()->back();
+        //return view('pannel.blog-edit', ['edit' => false]);
     }
 
     /**
@@ -40,7 +40,7 @@ class BlogController extends Controller
     public function store(Request $request)
     {
         return redirect()->back();
-        $rules = [
+        /*$rules = [
             'title' => 'required',
             'image' => 'required|file|mimes:png,jpg,jpeg',
             'text' => 'required',
@@ -54,7 +54,6 @@ class BlogController extends Controller
 
         $image = $request->file('image');
         $image_urn = $image->store('images/articles','public');
-
         Blog::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
@@ -67,7 +66,7 @@ class BlogController extends Controller
         ]);
 
         $article = Blog::orderBy('created_at', 'desc')->get()->first();
-        return redirect()->route('blogs.show',['blog' => $article->id]);
+        return redirect()->route('blogs.show',['blog' => $article->id]);*/
     }
 
     /**

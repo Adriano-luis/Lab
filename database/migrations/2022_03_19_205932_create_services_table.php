@@ -20,7 +20,7 @@ class CreateServicesTable extends Migration
             $table->string('description');
             $table->string('phone');
             $table->string('image');
-            $table->string('extra1');
+            $table->string('extra1')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

@@ -242,11 +242,6 @@ return [
                     'icon' => 'far fa-fw fa-file',
                     'url'  => 'pannel/blogs',
                 ],
-                [
-                    'text' => 'novo', 
-                    'icon' => 'far fa-fw fa-file',
-                    'url'  => 'pannel/blogs/create',
-                ],
             ],
         ],
         [
