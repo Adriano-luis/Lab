@@ -19,7 +19,7 @@ Route::post('/login', 'LoginController@authenticate')->name('login-post');
 Route::get('/new-user', 'UserController@new')->name('new-user');
 Route::post('/new-user', 'UserController@save')->name('new-user-post');
 
-Route::middleware('login')->prefix('panel')->group(function(){
+Route::middleware('login')->prefix('pannel')->group(function(){
     Route::get('/', function(){return view('pannel.index');})->name('pannel');
     
     Route::resource('/services', 'ServiceController');

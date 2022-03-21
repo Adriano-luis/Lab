@@ -188,8 +188,8 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
-    'logout_url' => 'panel/logout',
+    'dashboard_url' => 'pannel/',
+    'logout_url' => 'pannel/logout',
     'login_url' => 'login',
     'register_url' => 'register',
     'password_reset_url' => 'password/reset',
@@ -240,12 +240,12 @@ return [
                 [
                     'text' => 'Todas as matérias', 
                     'icon' => 'far fa-fw fa-file',
-                    'url'  => 'panel/blogs',
+                    'url'  => 'pannel/blogs',
                 ],
                 [
                     'text' => 'Nova matéria', 
                     'icon' => 'nav-icon fas fa-edit',
-                    'url'  => 'panel/blogs/create',
+                    'url'  => 'pannel/blogs/create',
                 ],
             ],
         ],
@@ -256,12 +256,11 @@ return [
                 [
                     'text' => 'Ver todos',
                     'icon' => 'far fa-fw fa-file',
-                    'url'  => '/panel/services',
+                    'url'  => '/pannel/services',
                     //fas fa-fw fa-lock
                 ],
             ],
         ],
-        ['header' => 'Configurações'],
     ],
 
     /*
