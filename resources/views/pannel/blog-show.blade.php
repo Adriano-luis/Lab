@@ -6,7 +6,7 @@
             <form action="{{route('blogs.destroy',$article->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
-                <button class="btn btn-danger">Excluir</button>
+                <button onclick="return confirm('Tem certeza que gostaria de deletar essa matéria?')" class="btn btn-danger">Excluir</button>
             </form>
         </div>
         <div style="margin: auto; margin-left:28px">

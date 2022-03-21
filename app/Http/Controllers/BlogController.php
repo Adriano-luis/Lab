@@ -163,6 +163,7 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //
+        Blog::where('id', $blog->id)->delete();
+        return redirect()->route('blogs.index');
     }
 }
