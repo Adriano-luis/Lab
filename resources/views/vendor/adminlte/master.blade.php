@@ -103,6 +103,7 @@
 
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
+    <script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script>
 
 </body>
 

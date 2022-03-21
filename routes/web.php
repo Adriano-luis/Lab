@@ -21,6 +21,8 @@ Route::post('/new-user', 'UserController@save')->name('new-user-post');
 
 Route::middleware('login')->prefix('pannel')->group(function(){
     Route::get('/', function(){return view('pannel.index');})->name('pannel');
+    Route::get('/profile', 'UserController@edit')->name('user.edit');
+    Route::post('/profile', 'UserController@update')->name('user.update');
     
     Route::resource('/services', 'ServiceController');
     Route::resource('/blogs', 'BlogController');

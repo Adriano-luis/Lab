@@ -60,7 +60,7 @@
             </li>
         @endif
 
-        <li>teste</li>
+        <li><a href="{{route('user.edit')}}">Meu perfil</a></li>
 
         {{-- User menu footer --}}
         <li class="user-footer">
