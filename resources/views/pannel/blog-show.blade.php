@@ -16,7 +16,7 @@
                         <h1>{{$article->title}}</h1>
                     </div>
                     <div class="row autor-texto-imprensa">
-                        {{$article->created_at}} - {{$article->author}}
+                        {{$article->created_at->format('F d,Y')}} - {{$article->author}}
                     </div><br><br>
                     <div class="row textoCopleto-texto-imprensa">
                         <?php echo $article->text ?>

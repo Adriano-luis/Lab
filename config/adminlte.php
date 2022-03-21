@@ -242,6 +242,11 @@ return [
                     'icon' => 'far fa-fw fa-file',
                     'url'  => 'pannel/blogs',
                 ],
+                [
+                    'text' => 'novo', 
+                    'icon' => 'far fa-fw fa-file',
+                    'url'  => 'pannel/blogs/create',
+                ],
             ],
         ],
         [
@@ -252,6 +257,12 @@ return [
                     'text' => 'Ver todos',
                     'icon' => 'far fa-fw fa-file',
                     'url'  => '/pannel/services',
+                    //fas fa-fw fa-lock
+                ],
+                [
+                    'text' => 'novo',
+                    'icon' => 'far fa-fw fa-file',
+                    'url'  => '/pannel/services/create',
                     //fas fa-fw fa-lock
                 ],
             ],
