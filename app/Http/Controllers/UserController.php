@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use App\User;
+//use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -13,15 +16,17 @@ class UserController extends Controller
     public function update(Request $request){
         $rules = [
             'name' => 'required|max:100',
-            'email' => 'required|email',
-            'phone' => 'min:14|max:18',
-            'image' => 'file|mimes:png,jpg,jpeg'
+            //'email' => 'required|email',
+            'phone' => 'min:11|max:14',
+            //'image' => 'file|mimes:png,jpg,jpeg'
         ];
         $feedback = [
             'required' => 'Você esqueceu de preencher!',
-            'email.email' => 'Digite um email válido!',
-            'image.mimes' => 'O arquivo precisa ser do tipo: png, jpg ou jpeg',
-            'name.max' => 'Máximo de 100 carácteres'
+            //'email.email' => 'Digite um email válido!',
+            //'image.mimes' => 'O arquivo precisa ser do tipo: png, jpg ou jpeg',
+            'name.max' => 'Máximo de 100 carácteres',
+            'phone.min' => 'Digite p telefone apenas com números',
+            'phone.max' => 'Digite p telefone apenas com números',
         ];
         
         $dinamycsRules = array();
@@ -35,11 +40,11 @@ class UserController extends Controller
         $request->validate($dinamycsRules,$feedback);
 
         $name = $request->get('name');
-        $email = $request->get('email');
+        //$email = $request->get('email');
         $phone = $request->get('phone');
-        $password = Hash::make($request->get('password'));
+        //$password = Hash::make($request->get('password'));
 
-        if($request->file('image')){
+        /*if($request->file('image')){
             Storage::disk('public')->delete(auth()->user()->image);
 
             $image = $request->file('image');
@@ -47,20 +52,20 @@ class UserController extends Controller
 
             User::where('id',auth()->user()->id)->update([
                 'name' => $name,
-                'email' => $email,
+                //'email' => $email,
                 'phone' => $phone,
-                'password' => $password,
+                //'password' => $password,
                 'image' => $image_urn
             ]);
 
             return redirect()->route('user.edit');
-        }
+        }*/
         
         User::where('id',auth()->user()->id)->update([
             'name' => $name,
-            'email' => $email,
+            //'email' => $email,
             'phone' => $phone,
-            'password' => $password
+            //'password' => $password
         ]);
 
         return redirect()->route('user.edit');
