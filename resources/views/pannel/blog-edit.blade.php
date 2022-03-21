@@ -1,8 +1,8 @@
 @extends('adminlte::page')
 @section('content')
     @if ($edit)
-      <form action="{{route('imprensa.update',$article->id)}}" method="POST" enctype="multipart/form-data">
-    @method('PUT')
+      <form action="{{route('blogs.update',$article->id)}}" method="POST" enctype="multipart/form-data">
+    @method('PATCH')
     @else
         <form action="{{route('blogs.store')}}" method="POST" enctype="multipart/form-data">
     @endif
@@ -16,7 +16,7 @@
             <label for="imagem-imprensa">Imagem da imprensa</label>
                 <div class="input-group">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="image" id="imagem-imprensa">
+                        <input type="file" class="custom-file-input" name="image" id="imagem-imprensa" >
                         <label name="upFotos" class="custom-file-label" for="imagem-imprensa">
                             Click para procurar em seu dispositivo Tam: 920 x 575
                         </label>

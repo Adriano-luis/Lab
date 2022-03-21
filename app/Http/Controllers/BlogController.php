@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Blog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
 {
@@ -39,8 +40,9 @@ class BlogController extends Controller
     {
         $rules = [
             'title' => 'required',
-            'image' => 'required',
+            'image' => 'required|file|mimes:png,jpg,jpeg',
             'text' => 'required',
+            'author' => 'required',
         ];
         $feedback = [
             'required' => 'Você precisa me preencher!' 
@@ -85,7 +87,8 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        //
+        
+        return view('pannel.blog-edit',['article' => $blog,'edit' => true]);
     }
 
     /**
@@ -97,7 +100,59 @@ class BlogController extends Controller
      */
     public function update(Request $request, Blog $blog)
     {
-        //
+        $rules = [
+            'title' => 'required',
+            'image' => 'file|mimes:png,jpg,jpeg',
+            'text' => 'required',
+            'author' => 'required'
+        ];
+        $feedback = [
+            'required' => 'Você esqueceu de me preencher!'
+        ];
+
+        if (!$blog){
+            return "Conteúdo não encontrado!";
+        }
+
+        if($request->method() === 'PATCH'){
+            $dinamycsRules = array();
+
+            foreach($rules as $input => $rule){
+                if(array_key_exists($input, $request->all())){
+                    $dinamycsRules[$input] = $rule;
+                }
+            }
+            $request->validate($dinamycsRules,$feedback);
+        }
+        $request->validate($rules,$feedback);
+
+        if($request->file('image')){
+
+            Storage::disk('public')->delete($blog->image);
+            $image = $request->file('image');
+            $image_urn = $image->store('images/articles', 'public');
+    
+            Blog::where('id',$blog->id)->update([
+                'title' => $request->title,
+                'description' => $request->description,
+                'image' => $image_urn,
+                'image_alt' => $request->image_alt,
+                'image_title' => $request->image_title,
+                'text' => $request->text,
+                'author' => $request->author
+            ]);
+        }
+
+        Blog::where('id',$blog->id)->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'image_alt' => $request->image_alt,
+            'image_title' => $request->image_title,
+            'text' => $request->text,
+            'author' => $request->author
+        ]);
+
+        return redirect()->route('blogs.show',['blog'=>$blog->id]);
     }
 
     /**
