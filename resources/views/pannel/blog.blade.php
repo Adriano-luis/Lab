@@ -10,11 +10,6 @@
                 <a href="{{route('blogs.show',$article->id)}}"> 
                     <div class="card card-widget">
                         <div class="card-header">
-                            <span class="description">
-                                <img style="width: 215px" src="{{asset('storage/'.$article->image)}}" alt="{{$article->image_alt}}" title="{{$article->image_title}}">
-                            </span>
-                        </div>
-                        <div class="card-body">
                             <div class="card-comment d-flex">
                                 <span class="username px-3">
                                     ID: {{$article->id}}
@@ -23,6 +18,8 @@
                             <div class="px-3 titulo-card-imprensa">
                                     <b><p>{{$article->title}}</p></b>
                             </div>
+                        </div>
+                        <div class="card-body">
                             <div class="px-3">
                                     {{$article->description}}
                             </div><br>

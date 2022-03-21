@@ -125,6 +125,7 @@ class BlogController extends Controller
             $request->validate($dinamycsRules,$feedback);
         }
         $request->validate($rules,$feedback);
+        $request->input('useAuthor') == 'on' ? $author = auth::user()->name : $author = $request->author;
 
         if($request->file('image')){
 
@@ -139,7 +140,7 @@ class BlogController extends Controller
                 'image_alt' => $request->image_alt,
                 'image_title' => $request->image_title,
                 'text' => $request->text,
-                'author' => $request->author
+                'author' => $author
             ]);
         }
 
@@ -149,7 +150,7 @@ class BlogController extends Controller
             'image_alt' => $request->image_alt,
             'image_title' => $request->image_title,
             'text' => $request->text,
-            'author' => $request->author
+            'author' => $author
         ]);
 
         return redirect()->route('blogs.show',['blog'=>$blog->id]);

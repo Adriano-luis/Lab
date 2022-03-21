@@ -44,7 +44,9 @@
             {{ $errors->first('text') ? $errors->first('text') : '' }}
           </div>
           <div class="form-group">
-            <label for="autor-imprensa">Autor</label>
+            <label for="autor-imprensa">Autor</label><br>
+            <input type="checkbox" name="useAuthor" checked="{{$article->author == auth()->user()->name ? 'checked':''}}"><span>Usar autor: {{$article->author }}</span><br><br>
+            <p>Outro:</p>
             <input type="text" class="form-control" id="autor-imprensa" aria-describedby="autor" placeholder="Digite o nome do autor" name="author" value="{{isset($article->author) ? $article->author : ''}}">
             {{ $errors->first('author') ? $errors->first('author') : '' }}
           </div>
