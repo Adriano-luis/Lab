@@ -15,7 +15,7 @@ class BlogController extends Controller
      */
     public function index()
     {
-       $articles =  auth::user()->blogs()->paginate(10);
+       $articles =  auth::user()->blogs()->orderBy('id','desc')->paginate(10);
         return view('pannel.blog',['articles' => $articles]);
     }
 
@@ -74,7 +74,7 @@ class BlogController extends Controller
      */
     public function show(Blog $blog)
     {
-        //
+        return view('pannel.blog-show',['article' => $blog]);
     }
 
     /**

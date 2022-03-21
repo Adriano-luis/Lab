@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 @section('content')
-    <section class="mostrar">
+    <section id="pannel-show">
         <div class="editar">
-            <a href="{{route('imprensa.edit',$imprensa->id)}}"><button class="btn btn-success">Editar</button></a>
-            <form action="{{route('imprensa.destroy',$imprensa->id)}}" method="POST">
+            <a href="{{route('blogs.edit',$article->id)}}"><button class="btn btn-success">Editar</button></a>
+            <form action="{{route('blogs.destroy',$article->id)}}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-danger">Excluir</button>
@@ -13,18 +13,18 @@
             <div class=" col financial-sombra">
                 <div class="row imagem-principal">
                     <div class="overflow">
-                        <img src="{{asset('storage/'.$imprensa->img)}}" alt="">
+                        <img src="{{asset('storage/'.$article->image)}}" alt="{{$article->image_alt}}" title="{{$article->image_title}}">
                     </div>
                 </div>
                 <div class="col financial-textos">
                     <div class="row titulo-texto-imprensa">
-                        <h1>{{$imprensa->titulo}}</h1>
+                        <h1>{{$article->title}}</h1>
                     </div>
                     <div class="row autor-texto-imprensa">
-                        {{$imprensa->created_at}} - {{$imprensa->autor}}
+                        {{$article->created_at}} - {{$article->author}}
                     </div><br><br>
                     <div class="row textoCopleto-texto-imprensa">
-                        <?php echo $imprensa->textoCompleto ?>
+                        <?php echo $article->text ?>
                     </div><br>
                     <hr><br><br>
                 </div>
