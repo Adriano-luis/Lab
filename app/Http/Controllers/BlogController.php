@@ -27,7 +27,8 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('pannel.blog-edit', ['edit' => false]);
+        return redirect()->back();
+        //return view('pannel.blog-edit', ['edit' => false]);
     }
 
     /**
@@ -38,7 +39,8 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        $rules = [
+        return redirect()->back();
+        /*$rules = [
             'title' => 'required',
             'image' => 'required|file|mimes:png,jpg,jpeg',
             'text' => 'required',
@@ -65,7 +67,7 @@ class BlogController extends Controller
         ]);
 
         $article = Blog::orderBy('created_at', 'desc')->get()->first();
-        return redirect()->route('blogs.show',['blog' => $article->id]);
+        return redirect()->route('blogs.show',['blog' => $article->id]);*/
     }
 
     /**
@@ -164,7 +166,8 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        Blog::where('id', $blog->id)->delete();
-        return redirect()->route('blogs.index');
+        //Blog::where('id', $blog->id)->delete();
+        //return redirect()->route('blogs.index');
+        return redirect()->back();
     }
 }
