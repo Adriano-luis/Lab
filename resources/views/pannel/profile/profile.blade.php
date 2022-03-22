@@ -5,15 +5,6 @@
     <div class="container">
         <form action="{{route('user.update')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="row profile-image">
-                <div class="col">
-                    <input type="file" name="image" id="image-profile" >
-                    <label for="image-profile">
-                        <img id="show-image" src="{{auth()->user()->image ? asset('storage/'.auth()->user()->image) : asset('assets/images/profile-user.png')}}" alt="Imagem de perfil" title="Imagem de perfil">
-                    </label>
-                    {{ $errors->first('image') ? $errors->first('image') : '' }}
-                </div>
-            </div>
             <div class="row inputs-profile">
                 <div class="col profile-data">
                     <input type="text" name="name" value="{{auth()->user()->name ? auth()->user()->name : ''}}" placeholder="Nome">
@@ -24,7 +15,7 @@
                     {{ $errors->first('phone') ? $errors->first('phone') : '' }}
                 </div>
                 <div class="col profile-buttons">
-                    <button class="btn">Mudar e-mail e/ou senha</button>
+                    <a href="{{route('confirm')}}" class="btn">Mudar e-mail e/ou senha</a>
                 </div>
             </div>
             <input type="submit" class="btn" value="Salvar">

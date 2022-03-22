@@ -70,4 +70,48 @@ class UserController extends Controller
 
         return redirect()->route('user.edit');
     }
+
+    public function credentials(){
+        return view('pannel.profile.admin');
+    }
+
+    public function credentialsSave(Request $request){
+        $rules = [
+            'email' => 'required|email',
+            'password' => 'required',
+        ];
+        $feedback = [
+            'required' => 'Você esqueceu de preencher!',
+            'email.email' => 'Digite um email válido!'
+        ];
+        
+        $dinamycsRules = array();
+        
+        foreach($rules as $input => $rule){
+            if(array_key_exists($input, $request->All())){
+                if($request->$input != null){
+                    $dinamycsRules[$input] = $rule;
+                }
+            }
+        }     
+        $request->validate($dinamycsRules,$feedback);
+
+        $email = $request->get('email');
+        $password = false;
+        if($request->password != null){
+            $password = Hash::make($request->get('password'));
+        }
+        if($password){
+            User::where('id',auth()->user()->id)->update([
+                'email' => $email,
+                'password' => $password
+            ]);
+        }else{
+            User::where('id',auth()->user()->id)->update([
+                'email' => $email
+            ]);
+        }
+
+        return redirect()->route('user.edit');
+    }
 }
