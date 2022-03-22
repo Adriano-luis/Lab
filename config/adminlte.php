@@ -254,12 +254,6 @@ return [
                     'url'  => '/pannel/services',
                     //fas fa-fw fa-lock
                 ],
-                [
-                    'text' => 'novo',
-                    'icon' => 'far fa-fw fa-file',
-                    'url'  => '/pannel/services/create',
-                    //fas fa-fw fa-lock
-                ],
             ],
         ],
     ],

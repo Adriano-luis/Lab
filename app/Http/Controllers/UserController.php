@@ -25,8 +25,8 @@ class UserController extends Controller
             //'email.email' => 'Digite um email válido!',
             //'image.mimes' => 'O arquivo precisa ser do tipo: png, jpg ou jpeg',
             'name.max' => 'Máximo de 100 carácteres',
-            'phone.min' => 'Digite p telefone apenas com números',
-            'phone.max' => 'Digite p telefone apenas com números',
+            'phone.min' => 'Digite o telefone apenas com números',
+            'phone.max' => 'Digite o telefone apenas com números',
         ];
         
         $dinamycsRules = array();
