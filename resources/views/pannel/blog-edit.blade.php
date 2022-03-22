@@ -9,7 +9,7 @@
         @csrf
         <div class="form-group">
             <label for="titulo-imprensa">Titulo</label>
-            <input maxlength="53" type="text" class="form-control" id="titulo-imprensa" aria-describedby="titulo" placeholder="Digite o titulo" name="title" value="{{isset($article->title) ? $article->title: '' }}">
+            <input maxlength="23" type="text" class="form-control" id="titulo-imprensa" aria-describedby="titulo" placeholder="Digite o titulo" name="title" value="{{isset($article->title) ? $article->title: '' }}">
             {{ $errors->first('title') ? $errors->first('title') : '' }}
           </div>
           <div class="form-group">
@@ -35,7 +35,7 @@
           </div>
           <div class="form-group">
             <label for="resumo-imprensa">Resumo</label>
-            <textarea maxlength="87" type="text" class="form-control resumo-completo" id="resumo-imprensa" placeholder="Digite o resumo" name="description">{{isset($article->description)? $article->description : ''}}</textarea>
+            <textarea maxlength="88" type="text" class="form-control resumo-completo" id="resumo-imprensa" placeholder="Digite o resumo" name="description">{{isset($article->description)? $article->description : ''}}</textarea>
             {{ $errors->first('description') ? $errors->first('description') : '' }}
           </div>
           <div class="form-group">
@@ -45,7 +45,7 @@
           </div>
           <div class="form-group">
             <label for="autor-imprensa">Autor</label><br>
-            <input type="checkbox" name="useAuthor" checked="{{$article->author == auth()->user()->name ? 'checked':''}}"><span>Usar autor: {{$article->author }}</span><br><br>
+            <input type="checkbox" name="useAuthor" {{$article->author === auth()->user()->name ? 'checked':''}}><span>Usar autor: {{auth()->user()->name }}</span><br><br>
             <p>Outro:</p>
             <input type="text" class="form-control" id="autor-imprensa" aria-describedby="autor" placeholder="Digite o nome do autor" name="author" value="{{isset($article->author) ? $article->author : ''}}">
             {{ $errors->first('author') ? $errors->first('author') : '' }}
