@@ -43,6 +43,24 @@
     border-bottom: 1px solid #0C026B;
 }
 
+#pannel-blog main > div a:hover{
+    color:#FF62E9;
+}
+
+#pannel-blog main > div a .title-card{
+    font-size: 18px;
+    color: #0C026B;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#pannel-blog main > div a .card-body{
+    font-size: 14px;
+    color: #191919;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; 
+}
+
 .profile-page .container{
     margin: auto;
     text-align:center;
