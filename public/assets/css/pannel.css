@@ -148,6 +148,39 @@
     padding-bottom: 50px;
 }
 
+#pannel-service aside{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 0px 0px;
+}
+
+#pannel-service aside > b{
+    width: 30px;
+    text-align: center;
+    border-bottom: 1px solid #0C026B;
+}
+
+#pannel-service div a:hover{
+    color:#FF62E9;
+}
+
+#pannel-service div a div .image-service{
+    display: flex;
+    justify-content: center;
+}
+
+#pannel-service div a div .card-title-service{
+    font-size: 18px;
+    color: #0C026B;
+    font-weight: 700;
+}
+
+#pannel-service div a div .description{
+    font-size: 14px;
+    color: #191919;
+    font-weight: 400; 
+}
+
 .profile-page .container{
     margin: auto;
     text-align:center;

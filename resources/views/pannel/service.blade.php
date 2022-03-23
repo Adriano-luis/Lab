@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 @section('content')
-<section id="pannel-blog">
-    <div class="couter-articles">
+<main id="pannel-service">
+    <aside class="couter-articles">
         Total: <b><?php echo sizeOf($services); ?></b>
-    </div><br>
-    <main class="row">
+    </aside><br>
+    <div class="row">
         @foreach ($services as $service)
             <div class="col-md-3">
                 <a href="{{route('services.edit',$service->id)}}"> 
@@ -14,16 +14,16 @@
                                 <span class="username px-3">
                                     ID: {{$service->id}}
                                 </span>
-                            </div><br>
-                            <span class="description">
+                            </div>
+                            <span class="image-service">
                                 <img style="width: 71px" src="{{asset('storage/'.$service->image)}}" alt="">
                             </span>
                         </div>
                         <div class="card-body">
-                            <div class="px-3 titulo-card-imprensa">
+                            <div class="px-3 card-title-service">
                                     <b><p>{{$service->title}}</p></b>
                             </div>
-                            <div class="px-3">
+                            <div class="px-3 description">
                                     {{$service->description}}
                             </div><br>
                         </div>
@@ -31,6 +31,6 @@
                 </a>
             </div>
         @endforeach
-    </main>
-</section>
+    </div>
+</main>
 @endsection
