@@ -109,42 +109,50 @@
     font-weight: 400;
 }
 
-#pannel-blog-edit .form-group.title{
+#pannel-blog-edit .form-group.title,
+#pannel-service-edit .form-group.title {
     padding-top:1rem;
     max-width: 300px;
 }
 
-#pannel-blog-edit .form-group.image .input-group{
+#pannel-blog-edit .form-group.image .input-group,
+#pannel-service-edit .form-group.image .input-group{
     max-width: 540px;
     margin-top: 10px;
 }
 
-#pannel-blog-edit .form-group.image .thumb{
+#pannel-blog-edit .form-group.image .thumb,
+#pannel-service-edit .form-group.image .thumb{
     max-width:350px;
     overflow: hidden;
 }
 
-#pannel-blog-edit .form-group.image .thumb img{
+#pannel-blog-edit .form-group.image .thumb img {
     width: 350px;
 }
 
-#pannel-blog-edit .form-group.tags #title-img {
+#pannel-blog-edit .form-group.tags #title-img,
+#pannel-service-edit .form-group.tags #title-img {
     max-width: 300px;
 }
 
-#pannel-blog-edit .form-group.tags .label-title-image {
+#pannel-blog-edit .form-group.tags .label-title-image,
+#pannel-service-edit .form-group.tags .label-title-image {
     margin-top:1rem;
 }
 
-#pannel-blog-edit .form-group.description textarea {
+#pannel-blog-edit .form-group.description textarea,
+#pannel-service-edit .form-group.description textarea {
     height: 45px;
 
 }
-#pannel-blog-edit .form-group.author #author {
+#pannel-blog-edit .form-group.author #author,
+#pannel-service-edit .form-group.phone #phone {
     max-width: 300px;
 }
 
-#pannel-blog-edit form{
+#pannel-blog-edit form,
+#pannel-service-edit form{
     padding-bottom: 50px;
 }
 
@@ -179,6 +187,14 @@
     font-size: 14px;
     color: #191919;
     font-weight: 400; 
+}
+
+#pannel-service-edit .form-group.image .thumb{
+    margin-bottom: 0.5rem;
+}
+
+#pannel-service-edit .form-group.image .thumb img{
+    max-width: 71px;
 }
 
 .profile-page .container{

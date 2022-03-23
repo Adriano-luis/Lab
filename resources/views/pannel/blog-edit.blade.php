@@ -34,12 +34,12 @@
             {{ $errors->first('image_alt') ? $errors->first('image_alt') : '' }}
             
             <label for="title-img" class="label-title-image">Title da imagem</label>
-            <input type="text" class="form-control" id="title-img" aria-describedby="autor" placeholder="Digite a tag Title da imagem" name="image_title" value="{{isset($article->image_title) ? $article->image_title : ''}}">
+            <input type="text" class="form-control" id="title-img" aria-describedby="title-image" placeholder="Digite a tag Title da imagem" name="image_title" value="{{isset($article->image_title) ? $article->image_title : ''}}">
             {{ $errors->first('image_title') ? $errors->first('image_title') : '' }}
           </div><hr>
           <div class="form-group description">
             <label for="description">Resumo</label>
-            <textarea maxlength="88" type="text" class="form-control resumo-completo" id="description" placeholder="Digite o resumo" name="description">{{isset($article->description)? $article->description : ''}}</textarea>
+            <textarea maxlength="88" type="text" class="form-control" id="description" placeholder="Digite o resumo" name="description">{{isset($article->description)? $article->description : ''}}</textarea>
             {{ $errors->first('description') ? $errors->first('description') : '' }}
           </div>
           <div class="form-group text">
