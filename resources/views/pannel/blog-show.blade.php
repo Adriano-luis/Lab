@@ -1,29 +1,27 @@
 @extends('adminlte::page')
 @section('content')
-    <section id="pannel-show">
-        <div class="editar">
+    <main id="pannel-blog-show">
+        <aside class="edit">
             <a href="{{route('blogs.edit',$article->id)}}"><button class="btn btn-success">Editar</button></a>
-        </div>
-        <div style="margin: auto; margin-left:28px">
-            <div class=" col financial-sombra">
-                <div class="row imagem-principal">
-                    <div class="overflow">
-                        <img src="{{asset('storage/'.$article->image)}}" alt="{{$article->image_alt}}" title="{{$article->image_title}}">
-                    </div>
-                </div>
-                <div class="col financial-textos">
-                    <div class="row titulo-texto-imprensa">
+        </aside>
+        <section>
+            <article class="col box-shadow">
+                <header class="row image">
+                    <img src="{{asset('storage/'.$article->image)}}" alt="{{$article->image_alt}}" title="{{$article->image_title}}">
+                </header>
+                <div class="col">
+                    <div class="row title-article">
                         <h1>{{$article->title}}</h1>
                     </div>
-                    <div class="row autor-texto-imprensa">
-                        {{$article->created_at->format('F d,Y')}} - {{$article->author}}
+                    <div class="row info-article">
+                        <h2>{{$article->created_at->format('F d,Y')}} - {{$article->author}}</h2>
                     </div><br><br>
-                    <div class="row textoCopleto-texto-imprensa">
+                    <div class="row fullText">
                         <?php echo $article->text ?>
                     </div><br>
                     <hr><br><br>
                 </div>
-            </div>
-        </div>
-    </section>
+            </article>
+        </section>
+    </main>
 @endsection

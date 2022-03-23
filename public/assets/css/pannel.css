@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .login-box .card.card-outline {
@@ -50,15 +51,62 @@
 #pannel-blog main > div a .title-card{
     font-size: 18px;
     color: #0C026B;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 700;
 }
 
 #pannel-blog main > div a .card-body{
     font-size: 14px;
     color: #191919;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400; 
+}
+
+#pannel-blog-show {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 920px;
+    margin:  auto;
+}
+
+#pannel-blog-show > aside,
+#pannel-blog-show > section {
+    width: 100%;
+    max-width: 920px;
+    text-align: end;
+    align-items: 10px;
+    padding-top: 10px;
+}
+
+#pannel-blog-show > section {
+    margin-bottom: 100px;
+}
+
+#pannel-blog-show section .box-shadow {
+    box-shadow: 0px 0px 23px ;
+}
+
+#pannel-blog-show section .box-shadow header.image {
+    margin-bottom: 25px;
+    overflow-x: hidden;
+}
+
+#pannel-blog-show section .box-shadow header.image img{
+    max-width: 920px;
+    max-height: 575px;
+}
+
+#pannel-blog-show section .box-shadow .title-article h1 {
+    font-weight: 700;
+}
+
+#pannel-blog-show section .box-shadow .info-article h2 {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+#pannel-blog-show section .box-shadow .fullText {
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .profile-page .container{
