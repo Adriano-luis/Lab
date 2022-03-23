@@ -22,7 +22,7 @@
                 <div class="custom-file">
                     <input type="file" class="custom-file-input" name="image" id="image" >
                     <label name="upFotos" class="custom-file-label" for="image">
-                        Click para procurar em seu dispositivo Tam: 920 x 575
+                        Click para procurar em seu dispositivo Tam: 72 x 72
                     </label>
                 </div>
             </div>
