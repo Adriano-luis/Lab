@@ -109,6 +109,45 @@
     font-weight: 400;
 }
 
+#pannel-blog-edit .form-group.title{
+    padding-top:1rem;
+    max-width: 300px;
+}
+
+#pannel-blog-edit .form-group.image .input-group{
+    max-width: 540px;
+    margin-top: 10px;
+}
+
+#pannel-blog-edit .form-group.image .thumb{
+    max-width:350px;
+    overflow: hidden;
+}
+
+#pannel-blog-edit .form-group.image .thumb img{
+    width: 350px;
+}
+
+#pannel-blog-edit .form-group.tags #title-img {
+    max-width: 300px;
+}
+
+#pannel-blog-edit .form-group.tags .label-title-image {
+    margin-top:1rem;
+}
+
+#pannel-blog-edit .form-group.description textarea {
+    height: 45px;
+
+}
+#pannel-blog-edit .form-group.author #author {
+    max-width: 300px;
+}
+
+#pannel-blog-edit form{
+    padding-bottom: 50px;
+}
+
 .profile-page .container{
     margin: auto;
     text-align:center;

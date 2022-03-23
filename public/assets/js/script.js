@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $("#image-profile").on("change", function(event){  
+    $("#image").on("change", function(event){  
         loadFile(event);
     });
 })

@@ -1,5 +1,6 @@
 @extends('adminlte::page')
 @section('content')
+  <main id="pannel-blog-edit">
     @if ($edit)
       <form action="{{route('blogs.update',$article->id)}}" method="POST" enctype="multipart/form-data">
     @method('PATCH')
@@ -7,55 +8,59 @@
         <form action="{{route('blogs.store')}}" method="POST" enctype="multipart/form-data">
     @endif
         @csrf
-        <div class="form-group">
-            <label for="titulo-imprensa">Titulo</label>
-            <input maxlength="23" type="text" class="form-control" id="titulo-imprensa" aria-describedby="titulo" placeholder="Digite o titulo" name="title" value="{{isset($article->title) ? $article->title: '' }}">
+        <div class="form-group title">
+            <label for="titile">Titulo da Máteria</label>
+            <input maxlength="23" type="text" class="form-control" id="titile" aria-describedby="titulo" placeholder="Digite o titulo" name="title" value="{{isset($article->title) ? $article->title: '' }}">
             {{ $errors->first('title') ? $errors->first('title') : '' }}
-          </div>
-          <div class="form-group">
-            <label for="imagem-imprensa">Imagem da imprensa</label>
+          </div><hr>
+          <div class="form-group image">
+            <label for="image">Imagem da Matéria</label><br>
+            <div class="thumb">
+              <img id="show-image" src="{{$article->image ? asset('storage/'.$article->image) : asset('assets/images/thumb.jpeg')}}">
+            </div>
                 <div class="input-group">
                     <div class="custom-file">
-                        <input type="file" class="custom-file-input" name="image" id="imagem-imprensa" >
-                        <label name="upFotos" class="custom-file-label" for="imagem-imprensa">
+                        <input type="file" class="custom-file-input" name="image" id="image" >
+                        <label name="upFotos" class="custom-file-label" for="image">
                             Click para procurar em seu dispositivo Tam: 920 x 575
                         </label>
                     </div>
                 </div>
                 {{ $errors->first('image') ? $errors->first('image') : '' }}
           </div>
-          <div class="form-group">
+          <div class="form-group tags">
             <label for="alt-img">Alt da imagem</label>
             <input type="text" class="form-control" id="alt-img" aria-describedby="alt" placeholder="Digite a tag alt da imagem" name="image_alt" value="{{isset($article->image_alt) ? $article->image_alt : ''}}">
             {{ $errors->first('image_alt') ? $errors->first('image_alt') : '' }}
             
-            <label for="title-img">Title da imagem</label>
+            <label for="title-img" class="label-title-image">Title da imagem</label>
             <input type="text" class="form-control" id="title-img" aria-describedby="autor" placeholder="Digite a tag Title da imagem" name="image_title" value="{{isset($article->image_title) ? $article->image_title : ''}}">
             {{ $errors->first('image_title') ? $errors->first('image_title') : '' }}
-          </div>
-          <div class="form-group">
-            <label for="resumo-imprensa">Resumo</label>
-            <textarea maxlength="88" type="text" class="form-control resumo-completo" id="resumo-imprensa" placeholder="Digite o resumo" name="description">{{isset($article->description)? $article->description : ''}}</textarea>
+          </div><hr>
+          <div class="form-group description">
+            <label for="description">Resumo</label>
+            <textarea maxlength="88" type="text" class="form-control resumo-completo" id="description" placeholder="Digite o resumo" name="description">{{isset($article->description)? $article->description : ''}}</textarea>
             {{ $errors->first('description') ? $errors->first('description') : '' }}
           </div>
-          <div class="form-group">
-            <label for="texto-imprensa">Texto completo</label>
-            <textarea type="text" class="form-control texto-completo" id="texto-imprensa" placeholder="Digite o texto completo" name="text">{{isset($article->text)? $article->text : ''}}</textarea>
+          <div class="form-group text">
+            <label for="text">Texto completo</label>
+            <textarea type="text" class="form-control" id="text" placeholder="Digite o texto completo" name="text">{{isset($article->text)? $article->text : ''}}</textarea>
             {{ $errors->first('text') ? $errors->first('text') : '' }}
           </div>
-          <div class="form-group">
-            <label for="autor-imprensa">Autor</label><br>
-            <input type="checkbox" name="useAuthor" {{$article->author === auth()->user()->name ? 'checked':''}}><span>Usar autor: {{auth()->user()->name }}</span><br><br>
+          <div class="form-group author">
+            <label for="author">Autor</label><br>
+            <input type="checkbox" name="useAuthor" {{$article->author === auth()->user()->name ? 'checked':''}}><span> Usar autor: {{auth()->user()->name }}</span><br><br>
             <p>Outro:</p>
-            <input type="text" class="form-control" id="autor-imprensa" aria-describedby="autor" placeholder="Digite o nome do autor" name="author" value="{{isset($article->author) ? $article->author : ''}}">
+            <input type="text" class="form-control" id="author" aria-describedby="autor" placeholder="Digite o nome do autor" name="author" value="{{isset($article->author) ? $article->author : ''}}">
             {{ $errors->first('author') ? $errors->first('author') : '' }}
           </div>
           <button type="submit" class="btn btn-success">Salvar</button>
     </form>
+  </main>
     <script src="https://cdn.tiny.cloud/1/eqd8b193ir437iordcerkybra8fcx7svmezrrogqa6ra7ygq/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
       tinymce.init({
-        selector: '#texto-imprensa',
+        selector: '#text',
         plugins: 'print preview powerpaste casechange importcss tinydrive searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists checklist wordcount tinymcespellchecker a11ychecker imagetools textpattern noneditable help formatpainter permanentpen pageembed charmap tinycomments mentions quickbars linkchecker emoticons advtable export',
         mobile: {
           plugins: 'print preview powerpaste casechange importcss tinydrive searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists checklist wordcount tinymcespellchecker a11ychecker textpattern noneditable help formatpainter pageembed charmap mentions quickbars linkchecker emoticons advtable'
