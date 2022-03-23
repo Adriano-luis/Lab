@@ -2,6 +2,15 @@
     box-sizing: border-box;
 }
 
+.login-box .card.card-outline {
+    border-top: 3px solid #FF62E9;
+}
+
+.login-box .card .card-body .btn {
+    background-color: #FF62E9;
+    border-color: #FF62E9;
+}
+
 #pannel-home .main-pannel{
     display: flex;
     flex-direction: column;
