@@ -60,7 +60,9 @@
             </li>
         @endif
 
-        <li><a href="{{route('user.edit')}}">Meu perfil</a></li>
+        <li class="user-footer">
+            <a href="{{route('user.edit')}}" class="btn btn-default btn-flat" style="width: 100%;">Meu perfil</a>
+        </li>
 
         {{-- User menu footer --}}
         <li class="user-footer">
