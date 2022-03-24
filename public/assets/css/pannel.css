@@ -197,14 +197,16 @@
     max-width: 71px;
 }
 
-#profile-page > h1{
+#profile-page > h1,
+#profile-admin > h1{
     margin: auto;
     padding-top: 40px;
     text-align:center;
     color: #0C026B;
 }
 
-#profile-page .container{
+#profile-page .container,
+#profile-admin .container{
     margin: auto;
     padding-top: 80px;
     text-align:center;
@@ -219,12 +221,14 @@
 }
 
 #profile-page .container .inputs-profile .profile-data input,
-#profile-page .container .inputs-profile .profile-buttons button{
+#profile-page .container .inputs-profile .profile-buttons button,
+#profile-admin .container .inputs-profile .profile-data input{
     width: 100%;
     max-width: 300px;
 }
 
-#profile-page .container .inputs-profile .profile-data input{
+#profile-page .container .inputs-profile .profile-data input,
+#profile-admin .container .inputs-profile .profile-data input{
     margin-bottom: 20px;
     height: 35px;
     padding-top:3px;
@@ -249,4 +253,18 @@
     margin-top: 30px;
     color: #FFF;
     background-color: #FF62E9;
+}
+
+#profile-admin .container .btn.save{
+    width: 100%;
+    max-width: 605px;
+    margin-top: 20px;
+    color: #FFF;
+    background-color: #FF62E9;
+}
+
+#profile-admin .container{
+    margin: auto;
+    padding-top: 100px;
+    text-align:center;
 }

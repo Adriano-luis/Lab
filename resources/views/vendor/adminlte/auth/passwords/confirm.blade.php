@@ -74,9 +74,9 @@
 
         {{-- Additional links --}}
         <div class="text-center">
-            <a href="{{ $password_reset_url }}">
+            <!-- Additional<a href="{{ $password_reset_url }}">
                 {{ __('adminlte::adminlte.i_forgot_my_password') }}
-            </a>
+            </a> -->
         </div>
 
     </div>
