@@ -15,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/login', 'LoginController@index')->name('login');
 Route::post('/login', 'LoginController@authenticate')->name('login-post');
-
 Route::get('/new-user', 'UserController@new')->name('new-user');
 Route::post('/new-user', 'UserController@save')->name('new-user-post');
 
@@ -35,3 +34,5 @@ Route::middleware('login')->prefix('pannel')->group(function(){
     Route::resource('/blogs', 'BlogController');
     Route::post('/logout','LoginController@logout')->name('logout');
 });
+
+Route::get('/', 'HomeController@index')->name('home');
