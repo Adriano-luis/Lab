@@ -1,7 +1,53 @@
 @extends('partials.master')
 @section('title')
-teste
+    Home
 @endsection
 @section('content')
-oi
+<section id="about">
+    <div class="container">
+        <h2>Sobre a <span>Lab Digital Mkt</span></h2>
+        <p>
+            Oferecemos muito mais que estratégias de marketing digital 360°. Queremos proporcionar uma parceria de sucesso para alavancar o alcance do seu negócio através de estratégias personalizadas que se encaixam nas necessidades da sua empresa e do seu cliente.
+        </p>
+        <p>
+            Ajudamos empresas a garantir seu posicionamento no mercado e adquirir autoridade e reconhecimento do seu público-alvo.
+        </p>    
+        <p>
+            Somos um laboratório criativo de estratégias ideais para o seu negócio.
+        </p>
+        <p>Ass:</p>
+        <p>Isabella Trevison</p>
+    </div>
+</section>
+<section id="blog">
+    <div class="container">
+        <h2>Blog</h2>
+        <div class="two-articles">
+            @foreach ($articles as $article)    
+                @if($article->id < 3)
+                    <article>
+                        <h3>{{$article->title}}</h3>
+                        <p>{{$article->description}}</p>
+                        <a href="{{$article->id}}">Continue Lendo</a>
+                    </article>
+                @endif
+            @endforeach
+            <img class="half" src="{{asset('assets/images/half-big-circle.png')}}" alt="Half big circle blue with middle white">
+            <img class="circle" src="{{asset('assets/images/circle-pink-blue.png')}}" alt="Circle blue and pink">
+            <img class="circle-yellow" src="{{asset('assets/images/circle-yellow.png')}}" alt="Circle blue, white and yellow">
+            <div class="filling"></div>
+        </div>
+        <div class="four-articles">
+            @foreach ($articles as $article)    
+                @if($article->id > 2)
+                    <article>
+                        <h3>{{$article->title}}</h3>
+                        <p>{{$article->description}}</p>
+                        <a href="{{$article->id}}">Continue Lendo</a>
+                    </article>
+                @endif
+            @endforeach
+        </div>
+    </div>
+</section>
 @endsection

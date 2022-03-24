@@ -3,10 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Service;
+use App\Blog;
+use App\User;
 
 class HomeController extends Controller
 {
     public function index(){
-        return view('index');
+        $articles = Blog::all();
+        $services = Service::all();
+        return view('index',['articles' => $articles, 'services' => $services]);
     }
 }
