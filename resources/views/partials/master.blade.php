@@ -7,10 +7,12 @@
     <title>Lab - @yield('title')</title>
     <link rel="icon" type="image/png" href="{{asset('assets/images/Logo-lab.png')}}">
     <link rel="stylesheet" href="{{asset('assets/css/template.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/footer.css')}}">
 </head>
 <body>
     @include('partials.header')
     @yield('content')
     @include('partials.footer')
+    <script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script>
 </body>
 </html>
