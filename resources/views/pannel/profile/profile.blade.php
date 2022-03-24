@@ -1,7 +1,8 @@
 @extends('adminlte::page')
 
 @section('content')
-<section class="profile-page">
+<main id="profile-page">
+    <h1>Configurações</h1>
     <div class="container">
         <form action="{{route('user.update')}}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -18,8 +19,8 @@
                     <a href="{{route('confirm')}}" class="btn">Mudar e-mail e/ou senha</a>
                 </div>
             </div>
-            <input type="submit" class="btn" value="Salvar">
+            <input type="submit" class="btn save" value="Salvar">
         </form>
     </div>
-</section>
+</main>
 @endsection
