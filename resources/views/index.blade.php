@@ -3,6 +3,38 @@
     Home
 @endsection
 @section('content')
+<main id="services">
+    <div class="container">
+        <div class="top-row">
+            @foreach ($services as $service)   
+                @if ($service->id < 5)     
+                    <article>
+                        <figure>
+                            <img src="{{asset('storage/'.$service->image)}}" alt="{{$service->image_alt}}" title="{{$service->image_title}}">
+                        </figure>
+                        <h3>{{$service->title}}</h3>
+                        <p>{{$service->description}}</p>
+                        <a href="#" value="{{$service->phone}}">Orçamento</a>
+                    </article>
+                @endif 
+            @endforeach
+        </div>
+        <div class="bottom-row">
+            @foreach ($services as $service)   
+                @if ($service->id > 4)     
+                    <article>
+                        <figure>
+                            <img src="{{asset('storage/'.$service->image)}}" alt="{{$service->image_alt}}" title="{{$service->image_title}}">
+                        </figure>
+                        <h3>{{$service->title}}</h3>
+                        <p>{{$service->description}}</p>
+                        <a href="#" value="{{$service->phone}}">Orçamento</a>
+                    </article>
+                @endif 
+            @endforeach
+        </div>
+    </div>
+</main>
 <section id="about">
     <div class="container">
         <h2>Sobre a <span>Lab Digital Mkt</span></h2>

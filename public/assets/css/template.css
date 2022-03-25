@@ -25,7 +25,8 @@ body{
 }
 
 #blog .container,
-#about .container{
+#about .container,
+#services .container{
     width: 100%;
     max-width: 104rem;
     height: 100%;
@@ -47,21 +48,21 @@ body{
 
 #blog .container div.two-articles .half{
     position: absolute;
-    top: 20.7rem;
+    top: 82.5rem;
     right: 23.8rem;
     z-index: 2;
 }
 
 #blog .container div.two-articles .circle{
     position: absolute;
-    top: 40.7rem;
+    top: 100.7rem;
     right: 15.4rem;
     z-index: 2;
 }
 
 #blog .container div.two-articles .circle-yellow{
     position: absolute;
-    top: -0.4rem;
+    top: 61.4rem;
     right: -9.4rem;
     z-index: 2;
 }
@@ -70,7 +71,7 @@ body{
     position: absolute;
     width: 24rem;
     height: 34rem;
-    top: 21.6rem;
+    top: 83.6rem;
     right: 0rem;
     z-index: 1;
     background-color: #FFF;
@@ -160,4 +161,49 @@ body{
     font-size: 1.6rem;
     font-weight: 700;
     color: #FF62E9;
+}
+
+#services{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60rem;
+}
+
+#services .container .top-row,
+#services .container .bottom-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+#services .container .bottom-row{
+    margin-top: 5.5rem;
+}
+
+#services .container article{
+    text-align: center;
+    line-height: 2.5rem;
+}
+
+#services .container article > figure{
+    margin-bottom: 1rem;
+}
+
+#services .container article > figure img{
+    max-width: 7.2rem;
+}
+
+#services .container article h3{
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0C026B;
+}
+
+#services .container article p{
+    max-width: 22rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #191919;
 }
