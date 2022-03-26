@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{asset('assets/css/footer.css')}}">
 </head>
 <body>
-    @include('partials.header')
+    
     @yield('content')
     @include('partials.footer')
     <script type="text/javascript" src="{{asset('assets/js/script.js')}}"></script>

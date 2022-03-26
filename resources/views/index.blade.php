@@ -3,6 +3,24 @@
     Home
 @endsection
 @section('content')
+<section id="first">
+    <aside>
+        <img src="{{asset('assets/images/left-side.png')}}">
+    </aside>
+    <div class="middle">
+        <div class="container">
+            @include('partials.header')
+            <div class="infos">
+                <h1>Laboratório de <span>estratégias</span> para o seu negócio</h1>
+            </div>
+            <button>Quero <b>impulsionar</b> a minha <b>empresa</b></button>
+            <img src="{{asset('assets/images/arrow-down.png')}}" alt="White arrow down ">
+        </div>
+    </div>
+    <aside>
+        <img src="{{asset('assets/images/right-side.png')}}">
+    </aside>
+</section>
 <main id="services">
     <div class="container">
         <div class="top-row">
