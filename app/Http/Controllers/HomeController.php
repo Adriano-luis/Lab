@@ -14,4 +14,8 @@ class HomeController extends Controller
         $services = Service::all();
         return view('index',['articles' => $articles, 'services' => $services]);
     }
+
+    public function contact(){
+        return view('contact');
+    }
 }

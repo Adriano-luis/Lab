@@ -69,17 +69,19 @@ header ul li a{
     z-index: -1;
 }
 
-#first aside img:first-child {
+#first aside img:first-child,
+#contact aside img:first-child {
     max-height: 100vh;
     margin-left: -0.5rem;
 }
 
-#first aside img:last-child {
-    max-height: 100vh;
+#first aside img:last-child,
+#contact aside img:last-child {
     margin-right: -1rem;
 }
 
-#first .middle{
+#first .middle,
+#contact .middle{
     width: 100%;
     height: 100%;
     max-width: 100.5rem;
@@ -90,14 +92,16 @@ header ul li a{
     z-index: 1;
 }
 
-#first .middle .container{
+#first .middle .container,
+#contact .middle .container{
     width: 100%;
     max-width: 41rem;
     margin: auto;
     text-align: center;
 }
 
-#first .middle .container .infos > h1{
+#first .middle .container .infos > h1,
+#contact .middle .container > h1{
     font-size: 4rem;
     font-weight: 700;
     text-align: center;
@@ -110,7 +114,7 @@ header ul li a{
 
 #first .middle .container button{
     width: 100%;
-    margin: 5rem 0 14rem 0;
+    margin: 5rem 0 9rem 0;
     padding: 2rem;
     font-size: 1.6rem;
     color: #fff;
@@ -119,7 +123,7 @@ header ul li a{
     border-radius: 2rem ;
 }
 
-#first .middle .container img{
+#first .middle .container .image-arrow{
     width: 100%;
     max-width: 4rem;
     bottom: 0;
@@ -313,4 +317,74 @@ header ul li a{
     font-size: 1.4rem;
     font-weight: 400;
     color: #191919;
+}
+
+#contact .top{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 23.23;
+}
+
+#contact header{
+    margin: 3rem 0 2rem 2rem;
+}
+
+#contact .middle{
+    height: 23.23rem;
+}
+
+#contact .middle .container > h1{
+    font-size: 2.5rem;
+}
+
+#contact .contact-main{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 58rem;
+    background-color: #FFF;
+}
+
+#contact aside img:first-child{
+    max-height: 23.2rem;
+}
+
+#contact .contact-main form{
+    width: 100%;
+    max-width: 60rem;
+    text-align: center;
+}
+
+#contact .contact-main form input,
+#contact .contact-main form textarea,
+#contact .contact-main form .submit{
+    width: 100%;
+    max-width: 46.5rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    height: 5rem;
+    border: 0.19rem solid #0C026B;
+    outline-color: #FF62E9;
+    border-radius: 2rem;
+}
+
+#contact .contact-main form input:first-child{
+    margin-top: 10rem;
+}
+
+#contact ::placeholder{
+    color: #D1D1D1;
+}
+
+#contact .contact-main form textarea{
+    height: 100%;
+    max-height: 15rem;
+}
+
+#contact .contact-main form .submit{
+    color: #FFF;
+    background-color: #FF62E9;
+    border: none;
+    outline: none;
 }

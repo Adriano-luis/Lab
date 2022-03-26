@@ -14,7 +14,7 @@
                 <h1>Laboratório de <span>estratégias</span> para o seu negócio</h1>
             </div>
             <button>Quero <b>impulsionar</b> a minha <b>empresa</b></button>
-            <img src="{{asset('assets/images/arrow-down.png')}}" alt="White arrow down ">
+            <img class="image-arrow" src="{{asset('assets/images/arrow-down.png')}}" alt="White arrow down ">
         </div>
     </div>
     <aside>

@@ -36,3 +36,4 @@ Route::middleware('login')->prefix('pannel')->group(function(){
 });
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/contact', 'HomeController@contact')->name('contact');
