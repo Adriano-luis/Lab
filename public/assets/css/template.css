@@ -211,13 +211,14 @@ header ul li a{
 
 #blog .container article p{
     margin-bottom: 1rem;
-    color: #191919;
+    color: rgba(26, 26, 26, 0.6);
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 2.5rem;
 }
 
-#blog .container article a{
+#blog .container article a,
+#services .container a{
     color: #FF62E9;
     font-size: 1.4rem;
     font-weight: 400;
@@ -251,7 +252,7 @@ header ul li a{
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 2.5rem;
-    color: #191919;
+    color: rgb(25, 25, 25, 0.6);
 }
 
 #about .container p:nth-child(3),
@@ -316,7 +317,7 @@ header ul li a{
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
     font-weight: 400;
-    color: #191919;
+    color: rgb(25, 25, 25, 0.6);
 }
 
 #contact .top{

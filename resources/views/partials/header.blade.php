@@ -1,5 +1,5 @@
 <header>
-    <img src="{{asset('assets/images/Logo-lab.png')}}" alt="logo">
+    <a href="{{route('home')}}"><img src="{{asset('assets/images/Logo-lab.png')}}" alt="logo"></a>
     <nav>
         <ul>
             <li><a href="#services">serviços</a></li>
