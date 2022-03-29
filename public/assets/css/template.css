@@ -70,14 +70,16 @@ header ul li a{
 }
 
 #first aside img,
-#contact aside img{
+#contact aside img,
+#article aside img{
     max-height: 100vh;
     margin-left: -0.5rem;
     margin-right: -1rem;
 }
 
 #first .middle,
-#contact .middle{
+#contact .middle,
+#article .middle{
     width: 100%;
     height: 100%;
     max-width: 100.5rem;
@@ -88,7 +90,8 @@ header ul li a{
 }
 
 #first .middle .container,
-#contact .middle .container{
+#contact .middle .container,
+#article .middle .container{
     width: 100%;
     max-width: 41rem;
     margin: auto;
@@ -96,7 +99,8 @@ header ul li a{
 }
 
 #first .middle .container .infos > h1,
-#contact .middle .container > h1{
+#contact .middle .container > h1,
+#article .middle .container > h1{
     font-size: 4rem;
     font-weight: 700;
     text-align: center;
@@ -315,26 +319,31 @@ header ul li a{
     color: rgb(25, 25, 25, 0.6);
 }
 
-#contact .top{
+#contact .top,
+#article .top{
     display: flex;
     justify-content: center;
     width: 100%;
     height: 23.23rem;
 }
 
-#contact header{
+#contact header,
+#article header{
     margin: 3rem 0 2rem 2rem;
 }
 
+#contact .middle,
 #contact .middle{
     height: 23.23rem;
 }
 
-#contact .middle .container > h1{
+#contact .middle .container > h1,
+#article .middle .container > h1{
     font-size: 2.5rem;
 }
 
-#contact aside img{
+#contact aside img,
+#article aside img{
     max-height: 23.2rem;
 }
 
@@ -384,4 +393,48 @@ header ul li a{
     background-color: #FF62E9;
     border: none;
     outline: none;
+}
+
+#article .main-article{
+    width: 100%;
+    max-width: 89.1rem;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+#article .main-article > img{
+    width: 100%;
+    margin-top: 5rem;
+    max-height: 46rem;
+}
+
+#article .main-article > h2{
+    margin-top: 3.5rem;
+    font-size: 2.5rem;
+    color: #0C026B;
+}
+
+#article .main-article .infos-articles{
+   margin: 0.5rem 0 7.4rem 0;
+}
+
+#article .main-article .infos-articles span{
+   margin-right: 3.5rem;
+   font-size: 1.4rem;
+   color: rgba(25, 25, 25, 0.6);
+}
+
+#article .main-article .infos-articles img{
+   max-width:  2rem;
+   margin-bottom: -0.5rem;
+}
+
+#article .main-article .full-text {
+    margin-bottom:  7.4rem;
+    font-size: 1.6rem;
+    color:rgb(25, 25, 25, 0.6);
+}
+
+#article .main-article .full-text blockquote{
+    color: #FF62E9;
 }

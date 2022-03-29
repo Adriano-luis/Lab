@@ -78,7 +78,7 @@
                     <article>
                         <h3>{{$article->title}}</h3>
                         <p>{{$article->description}}</p>
-                        <a href="{{$article->id}}">Continue Lendo</a>
+                        <a href="{{route('article',['article' => $article->id])}}">Continue Lendo</a>
                     </article>
                 @endif
             @endforeach
@@ -93,7 +93,7 @@
                     <article>
                         <h3>{{$article->title}}</h3>
                         <p>{{$article->description}}</p>
-                        <a href="{{$article->id}}">Continue Lendo</a>
+                        <a href="{{route('article',['article' => $article->id])}}">Continue Lendo</a>
                     </article>
                 @endif
             @endforeach
