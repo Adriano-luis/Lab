@@ -20,12 +20,12 @@ Artigo
         </aside>
     </div>
     <main class="main-article">
-        <img src="{{asset('storage/'.$article->image)}}" alt="">
+        <img src="{{asset('storage/'.$article->image)}}" alt="{{$article->image_alt}}" title="{{$article->image_title}}">
         <h2>{{$article->title}}</h2>
 
         <div class="infos-articles">
-            <span><img src="{{asset('assets/images/calendar.png')}}" alt=""> {{$article->created_at->format('F d,Y')}}</span>
-            <span><img src="{{asset('assets/images/user.png')}}" alt=""> Post by: {{$article->author}}</span>
+            <span><img src="{{asset('assets/images/calendar.png')}}" alt="Pink calendar icon" title="Calendário"> {{$article->created_at->format('F d,Y')}}</span>
+            <span><img src="{{asset('assets/images/user.png')}}" alt="Pink user icon" title=""> Post by: {{$article->author}}</span>
         </div>
 
         <div class="full-text">
