@@ -69,14 +69,10 @@ header ul li a{
     z-index: -1;
 }
 
-#first aside img:first-child,
-#contact aside img:first-child {
+#first aside img,
+#contact aside img{
     max-height: 100vh;
     margin-left: -0.5rem;
-}
-
-#first aside img:last-child,
-#contact aside img:last-child {
     margin-right: -1rem;
 }
 
@@ -89,7 +85,6 @@ header ul li a{
     margin-right: 0.55rem;
     padding-left: 1rem;
     background-color: #0C026B;
-    z-index: 1;
 }
 
 #first .middle .container,
@@ -324,7 +319,7 @@ header ul li a{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 23.23;
+    height: 23.23rem;
 }
 
 #contact header{
@@ -339,6 +334,10 @@ header ul li a{
     font-size: 2.5rem;
 }
 
+#contact aside img{
+    max-height: 23.2rem;
+}
+
 #contact .contact-main{
     display: flex;
     justify-content: center;
@@ -347,9 +346,6 @@ header ul li a{
     background-color: #FFF;
 }
 
-#contact aside img:first-child{
-    max-height: 23.2rem;
-}
 
 #contact .contact-main form{
     width: 100%;
