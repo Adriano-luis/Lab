@@ -15,7 +15,7 @@
             <img src="{{asset('assets/images/half-square.png')}}" alt="half square white and pink">
         </div>
         <h3>Quero impulsionar a minha empresa</h3>
-        <button>Solicite seu orçamento</button>
+        <button class="makeContact">Solicite seu orçamento</button>
     </section>
     <section class="social">
         <div class="icons">

@@ -32,7 +32,7 @@
                         </figure>
                         <h3>{{$service->title}}</h3>
                         <p>{{$service->description}}</p>
-                        <a href="#" value="{{$service->phone}}">Orçamento</a>
+                        <a href="#" class="makeContact" value="{{$service->phone}}">Orçamento</a>
                     </article>
                 @endif 
             @endforeach
@@ -46,7 +46,7 @@
                         </figure>
                         <h3>{{$service->title}}</h3>
                         <p>{{$service->description}}</p>
-                        <a href="#" value="{{$service->phone}}">Orçamento</a>
+                        <a href="#" class="makeContact" value="{{$service->phone}}">Orçamento</a>
                     </article>
                 @endif 
             @endforeach
