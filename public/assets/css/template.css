@@ -17,7 +17,7 @@ body{
 }
 
 header{
-    margin: 5rem 0 10rem 2rem;
+    margin: 5rem 0 10rem 0rem;
 }
 
 header img{
@@ -329,7 +329,7 @@ header ul li a{
 
 #contact header,
 #article header{
-    margin: 3rem 0 2rem 2rem;
+    margin: 3rem 0 2rem 0rem;
 }
 
 #contact .middle,
@@ -410,12 +410,13 @@ header ul li a{
 
 #article .main-article > h2{
     margin-top: 3.5rem;
-    font-size: 2.5rem;
+    font-size: 3.2rem;
+    font-weight: 700;
     color: #0C026B;
 }
 
 #article .main-article .infos-articles{
-   margin: 0.5rem 0 7.4rem 0;
+   margin: 0.5rem 0 5rem 0;
 }
 
 #article .main-article .infos-articles span{
@@ -436,5 +437,6 @@ header ul li a{
 }
 
 #article .main-article .full-text blockquote{
-    color: #FF62E9;
+    border-left: 0.7rem solid #FF62E9;
+    border-left-color: #FF62E9 !important;
 }
