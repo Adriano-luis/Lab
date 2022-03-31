@@ -7,7 +7,7 @@
 <section id="contact">
     <div class="top">
         <aside>
-            <img src="{{asset('assets/images/contact-left.png')}}" alt="mixed simbols and circles in color of website" title="simbols and circles">
+            <img src="{{asset('assets/images/contact-left.png')}}" alt="Mistura de símbolos e círculos na cor do site" title="Símbolos e círculos">
         </aside>
         <div class="middle">
             <div class="container">
@@ -16,7 +16,7 @@
             </div>
         </div>
         <aside>
-            <img src="{{asset('assets/images/contact-right.png')}}" alt="mixed simbols and circles in color of website" title="simbols and circles">
+            <img src="{{asset('assets/images/contact-right.png')}}" alt="Mistura de símbolos e círculos na cor do site" title="Símbolos e círculos">
         </aside>
     </div>
     <div class="contact-main">

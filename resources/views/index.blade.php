@@ -5,7 +5,7 @@
 @section('content')
 <section id="first">
     <aside>
-        <img src="{{asset('assets/images/left-side.webp')}}" alt="mixed simbols and circles in color of website" title="simbols and circles">
+        <img src="{{asset('assets/images/left-side.webp')}}" alt="Mistura de símbolos e círculos na cor do site" title="Símbolos e círculos">
     </aside>
     <div class="middle">
         <div class="container">
@@ -14,11 +14,11 @@
                 <h1>Laboratório de <span>estratégias</span> para o seu negócio</h1>
             </div>
             <button>Quero <b>impulsionar</b> a minha <b>empresa</b></button>
-            <img class="image-arrow" src="{{asset('assets/images/arrow-down.png')}}" alt="White arrow down ">
+            <img class="image-arrow" src="{{asset('assets/images/arrow-down.png')}}" alt="Uma seta branca apontando para baixo" title="Seta branca para baixo">
         </div>
     </div>
     <aside>
-        <img src="{{asset('assets/images/right-side.webp')}}" alt="mixed simbols and circles in color of website" title="simbols and circles">
+        <img src="{{asset('assets/images/right-side.webp')}}" alt="Mistura de símbolos e círculos na cor do site" title="Símbolos e círculos">
     </aside>
 </section>
 <main id="services">
@@ -82,9 +82,9 @@
                     </article>
                 @endif
             @endforeach
-            <img class="half" src="{{asset('assets/images/half-big-circle.webp')}}" alt="Half big circle blue with middle white">
-            <img class="circle" src="{{asset('assets/images/circle-pink-blue.png')}}" alt="Circle blue and pink">
-            <img class="circle-yellow" src="{{asset('assets/images/circle-yellow.png')}}" alt="Circle blue, white and yellow">
+            <img class="half" src="{{asset('assets/images/half-big-circle.webp')}}" alt="Círculo grande pela metade na cor azul com o meio branco" title="Meio círculo azul e branco">
+            <img class="circle" src="{{asset('assets/images/circle-pink-blue.png')}}" alt="Um círculo metade azul e outra medate rosa" title="Círculo metade azul e rosa">
+            <img class="circle-yellow" src="{{asset('assets/images/circle-yellow.png')}}" alt="Um pedaço de círculo nas cores amarelo mais ao meio, branco no meio e azul na extremidade" title="Círculo azul, branco e amarelo">
             <div class="filling"></div>
         </div>
         <div class="four-articles">

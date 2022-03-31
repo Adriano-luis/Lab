@@ -16,7 +16,7 @@
                                 </span>
                             </div>
                             <span class="image-service">
-                                <img style="width: 71px" src="{{asset('storage/'.$service->image)}}" alt="">
+                                <img style="width: 71px" src="{{asset('storage/'.$service->image)}}" alt="{{$service->image_alt}}" title="{{$service->image_title}}" >
                             </span>
                         </div>
                         <div class="card-body">

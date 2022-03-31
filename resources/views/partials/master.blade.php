@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="URL_BASE" content="{{ url('/') }}">
     <title>Lab - @yield('title')</title>
-    <link rel="icon" type="image/png" href="{{asset('assets/images/Logo-lab.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('assets/images/Logo-lab.webp')}}">
     <link rel="stylesheet" href="{{asset('assets/css/template.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/footer.css')}}">
 </head>
