@@ -440,3 +440,53 @@ header ul li a{
     border-left: 0.7rem solid #FF62E9;
     border-left-color: #FF62E9 !important;
 }
+
+@media (max-width: 1042px){
+    header ul li:first-child {
+        margin-left: 3rem;
+    }
+
+    #first .middle .container .infos > h1,
+    #contact .middle .container > h1,
+    #article .middle .container > h1{
+        font-size: 3.5rem;
+    }
+
+    #first .middle .container button {
+        max-width: 36rem;
+        margin: 5rem 0 15rem 0;
+    }
+
+    #about .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #blog .container{
+        padding-left: 2rem;
+    }
+
+    #blog .container div.two-articles .circle-yellow,
+    #blog .container div.two-articles .half,
+    #blog .container div.two-articles .filling {
+        display: none;
+    }
+
+    #blog .container div.two-articles .circle {
+        position: absolute;
+        top: 189rem;
+        right: 15.4rem;
+        z-index: 2;
+    }
+
+}
+
+@media (max-width: 780px){
+    #service {
+        padding-bottom: 3rem;
+    }
+    #about {
+        margin-top: 3rem;
+    }
+}

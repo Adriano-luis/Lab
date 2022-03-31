@@ -1,5 +1,5 @@
 <header>
-    <a href="{{route('home')}}"><img src="{{asset('assets/images/Logo-lab.png')}}" alt="Logo do site Lab" title="Logo"></a>
+    <a href="{{route('home')}}"><img src="{{asset('assets/images/Logo-lab.webp')}}" alt="Logo do site Lab" title="Logo"></a>
     <nav>
         <ul>
             <li><a class="pageScroll" href="#services" aria-label="services">serviços</a></li>
