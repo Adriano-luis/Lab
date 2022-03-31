@@ -7,7 +7,7 @@ Artigo
 <div id="article">
     <div class="top">
         <aside>
-            <img src="{{asset('assets/images/contact-left.png')}}">
+            <img src="{{asset('assets/images/contact-left.png')}}" alt="mixed simbols and circles in color of website" title="simbols and circles">
         </aside>
         <div class="middle">
             <div class="container">
@@ -16,7 +16,7 @@ Artigo
             </div>
         </div>
         <aside>
-            <img src="{{asset('assets/images/contact-right.png')}}">
+            <img src="{{asset('assets/images/contact-right.png')}}" alt="mixed simbols and circles in color of website" title="simbols and circles">
         </aside>
     </div>
     <main class="main-article">
@@ -25,7 +25,7 @@ Artigo
 
         <div class="infos-articles">
             <span><img src="{{asset('assets/images/calendar.png')}}" alt="Pink calendar icon" title="Calendário"> {{$article->created_at->format('F d,Y')}}</span>
-            <span><img src="{{asset('assets/images/user.png')}}" alt="Pink user icon" title=""> Post by: {{$article->author}}</span>
+            <span><img src="{{asset('assets/images/user.webp')}}" alt="Pink user icon" title=""> Post by: {{$article->author}}</span>
         </div>
 
         <div class="full-text">

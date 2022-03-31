@@ -15,7 +15,7 @@
                     </div>
                     <div class="row info-article">
                         <span><img src="{{asset('assets/images/calendar.png')}}" alt="Pink calendar icon" title="Calendário"> {{$article->created_at->format('F d,Y')}}</span>
-                        <span><img src="{{asset('assets/images/user.png')}}" alt="Pink user icon" title=""> Post by: {{$article->author}}</span>
+                        <span><img src="{{asset('assets/images/user.webp')}}" alt="Pink user icon" title=""> Post by: {{$article->author}}</span>
                     </div><br><br>
                     <div class="row fullText">
                         <?php echo $article->text ?>

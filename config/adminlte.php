@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>Lab</b>',
-    'logo_img' => 'assets/images/Logo-lab.png',
+    'logo_img' => 'assets/images/Logo-lab.webp',
     'logo_img_class' => 'brand-image elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',

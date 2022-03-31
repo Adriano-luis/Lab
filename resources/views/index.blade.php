@@ -5,7 +5,7 @@
 @section('content')
 <section id="first">
     <aside>
-        <img src="{{asset('assets/images/left-side.png')}}">
+        <img src="{{asset('assets/images/left-side.webp')}}" alt="mixed simbols and circles in color of website" title="simbols and circles">
     </aside>
     <div class="middle">
         <div class="container">
@@ -18,7 +18,7 @@
         </div>
     </div>
     <aside>
-        <img src="{{asset('assets/images/right-side.png')}}">
+        <img src="{{asset('assets/images/right-side.webp')}}" alt="mixed simbols and circles in color of website" title="simbols and circles">
     </aside>
 </section>
 <main id="services">
@@ -82,7 +82,7 @@
                     </article>
                 @endif
             @endforeach
-            <img class="half" src="{{asset('assets/images/half-big-circle.png')}}" alt="Half big circle blue with middle white">
+            <img class="half" src="{{asset('assets/images/half-big-circle.webp')}}" alt="Half big circle blue with middle white">
             <img class="circle" src="{{asset('assets/images/circle-pink-blue.png')}}" alt="Circle blue and pink">
             <img class="circle-yellow" src="{{asset('assets/images/circle-yellow.png')}}" alt="Circle blue, white and yellow">
             <div class="filling"></div>
