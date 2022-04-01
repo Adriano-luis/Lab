@@ -557,6 +557,63 @@ header ul li a{
     #services .container .bottom-row {
         max-width:  21.7rem;
     }
+}
+
+
+@media (max-width: 785px){
+    #services {
+        height: 100rem;
+    }
+
+    #services .container .top-row,
+    #services .container .bottom-row {
+        max-width:  46.7rem;
+        margin: auto;
+        flex-wrap: wrap; 
+    }
+
+    #blog {
+        height: 77rem;
+    }
+
+    #blog .container .two-articles,
+    #blog .container .four-articles {
+        max-width:  40rem;
+        margin: auto;
+        flex-wrap: wrap; 
+    }
+    
+    #blog .container div.two-articles {
+        justify-content: space-between;
+    }
+
+    #blog .container div.two-articles article {
+        margin-right: 0rem;
+    }
+
+    #blog .container div.two-articles article,
+    #blog .container .four-articles article{
+        margin-bottom: 1rem;
+    }
+
+    #blog .container div.two-articles .circle {
+       display: none;
+    }   
+}
+
+@media (max-width: 473px){
+    #services {
+        height: 195rem;
+    }
+    
+    #services .container {
+        margin: 2rem auto;
+    }
+
+    #services .container .top-row,
+    #services .container .bottom-row {
+        max-width:  21.7rem;
+    }
 
     #about {
         height: 61rem;
