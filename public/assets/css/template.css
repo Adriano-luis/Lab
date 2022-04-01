@@ -489,6 +489,22 @@ header ul li a{
 
 }
 
+@media (max-width: 890px){
+
+    #article .main-article {
+        max-width: 60.1rem;
+        text-align: center;
+    }
+
+    #article .main-article .infos-articles {
+        margin: 0.5rem 0 5rem 2rem;
+    }
+
+    #article .main-article .infos-articles span {
+        margin-right: 2.5rem;
+    }
+}
+
 @media (max-width: 810px){
     #blog .container div.two-articles .circle {
         position: absolute;
@@ -500,62 +516,18 @@ header ul li a{
     #services {
         height: 62rem;
     }
-}
 
-
-@media (max-width: 785px){
-    #services {
-        height: 100rem;
+    #article .main-article {
+        max-width: 50.1rem;
+        text-align: center;
     }
 
-    #services .container .top-row,
-    #services .container .bottom-row {
-        max-width:  46.7rem;
-        margin: auto;
-        flex-wrap: wrap; 
+    #article .main-article .infos-articles {
+        margin: 0.5rem 0 5rem 2rem;
     }
 
-    #blog {
-        height: 77rem;
-    }
-
-    #blog .container .two-articles,
-    #blog .container .four-articles {
-        max-width:  40rem;
-        margin: auto;
-        flex-wrap: wrap; 
-    }
-    
-    #blog .container div.two-articles {
-        justify-content: space-between;
-    }
-
-    #blog .container div.two-articles article {
-        margin-right: 0rem;
-    }
-
-    #blog .container div.two-articles article,
-    #blog .container .four-articles article{
-        margin-bottom: 1rem;
-    }
-
-    #blog .container div.two-articles .circle {
-       display: none;
-    }   
-}
-
-@media (max-width: 473px){
-    #services {
-        height: 195rem;
-    }
-    
-    #services .container {
-        margin: 2rem auto;
-    }
-
-    #services .container .top-row,
-    #services .container .bottom-row {
-        max-width:  21.7rem;
+    #article .main-article .infos-articles span {
+        margin-right: 2.5rem;
     }
 }
 
@@ -599,6 +571,19 @@ header ul li a{
     #blog .container div.two-articles .circle {
        display: none;
     }   
+
+    #article .main-article {
+        max-width: 41.1rem;
+        text-align: center;
+    }
+
+    #article .main-article .infos-articles {
+        margin: 0.5rem 0 5rem 2rem;
+    }
+
+    #article .main-article .infos-articles span {
+        margin-right: 2.5rem;
+    }
 }
 
 @media (max-width: 473px){
@@ -715,5 +700,27 @@ header ul li a{
 
     header #mobile #submenu a:hover{
         color: #FF62E9;
+    }
+
+    #article aside{
+        display: none;
+    }
+
+    #article .middle{
+        margin-left: 0.55rem;
+        padding: 0 2rem;
+    }
+
+    #article .main-article {
+        max-width: 34.1rem;
+        text-align: center;
+    }
+
+    #article .main-article .infos-articles {
+        margin: 0.5rem 0 5rem 2rem;
+    }
+
+    #article .main-article .infos-articles span {
+        margin-right: 2.5rem;
     }
 }
