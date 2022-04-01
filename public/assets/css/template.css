@@ -602,8 +602,22 @@ header ul li a{
 }
 
 @media (max-width: 473px){
+    #first .middle .container .infos > h1{
+        font-size: 2.5rem;
+    }
+
+    #first .middle {
+        padding-left: 1.5rem;
+        margin-left: 1.2rem;
+    }
+
+    #first .middle .container button {
+        max-width: 36rem;
+        margin: 5rem 0 15rem -1.5rem;
+    }
+
     #services {
-        height: 195rem;
+        height: 205rem;
     }
     
     #services .container {
@@ -615,6 +629,10 @@ header ul li a{
         max-width:  21.7rem;
     }
 
+    #services .container article {
+        margin-bottom: 2rem;
+    }
+
     #about {
         height: 61rem;
     }
@@ -623,18 +641,18 @@ header ul li a{
         max-width: 33rem;
     }
 
-    #about .container p:nth-child(5),
-    #about .container p:nth-child(6){
+    #about .container p{
         text-align: center;
+        text-justify: justify;
     }
 
     #blog {
-        height: 132rem;
+        height: 138rem;
     }
 
     #blog .container .two-articles,
     #blog .container .four-articles {
-        max-width:  18rem;
+        max-width:  17rem;
         margin: auto;
         flex-wrap: wrap; 
     }
@@ -645,10 +663,12 @@ header ul li a{
 
     #blog .container div.two-articles article,
     #blog .container .four-articles article{
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
+        text-align: center;
     }
 
     #blog .container > h2{
+        max-width: 40rem;
         text-align: center;
     }
 
@@ -667,7 +687,7 @@ header ul li a{
     header .icon-mobile {
         display: block;
         max-width: 4rem;
-        margin-left: 16rem;
+        margin-left: 13rem;
         cursor: pointer;
     }
 

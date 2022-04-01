@@ -65,8 +65,6 @@
         <p>
             Somos um laboratório criativo de estratégias ideais para o seu negócio.
         </p>
-        <p>Ass:</p>
-        <p>Isabella Trevison</p>
     </div>
 </section>
 <section id="blog">
