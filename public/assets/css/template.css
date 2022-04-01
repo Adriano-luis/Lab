@@ -20,6 +20,12 @@ header{
     margin: 5rem 0 10rem 0rem;
 }
 
+header #mobile,
+header #mobile #submenu,
+header .icon-mobile{
+    display: none;
+}
+
 header img{
     max-width: 8rem;
 }
@@ -482,11 +488,145 @@ header ul li a{
 
 }
 
-@media (max-width: 780px){
-    #service {
-        padding-bottom: 3rem;
+@media (max-width: 810px){
+    #blog .container div.two-articles .circle {
+        position: absolute;
+        top: 189rem;
+        right: 5.4rem;
+        z-index: 2;
     }
+
+    #services {
+        height: 62rem;
+    }
+}
+
+
+@media (max-width: 785px){
+    #services {
+        height: 100rem;
+    }
+
+    #services .container .top-row,
+    #services .container .bottom-row {
+        max-width:  46.7rem;
+        margin: auto;
+        flex-wrap: wrap; 
+    }
+
+    #blog {
+        height: 77rem;
+    }
+
+    #blog .container .two-articles,
+    #blog .container .four-articles {
+        max-width:  40rem;
+        margin: auto;
+        flex-wrap: wrap; 
+    }
+    
+    #blog .container div.two-articles {
+        justify-content: space-between;
+    }
+
+    #blog .container div.two-articles article {
+        margin-right: 0rem;
+    }
+
+    #blog .container div.two-articles article,
+    #blog .container .four-articles article{
+        margin-bottom: 1rem;
+    }
+
+    #blog .container div.two-articles .circle {
+       display: none;
+    }   
+}
+
+@media (max-width: 473px){
+    #services {
+        height: 195rem;
+    }
+    
+    #services .container {
+        margin: 2rem auto;
+    }
+
+    #services .container .top-row,
+    #services .container .bottom-row {
+        max-width:  21.7rem;
+    }
+
     #about {
-        margin-top: 3rem;
+        height: 61rem;
+    }
+
+    #about .container p {
+        max-width: 33rem;
+    }
+
+    #blog {
+        height: 132rem;
+    }
+
+    #blog .container .two-articles,
+    #blog .container .four-articles {
+        max-width:  18rem;
+        margin: auto;
+        flex-wrap: wrap; 
+    }
+
+    #blog .container div.two-articles{
+        margin-bottom: 2rem;
+    }
+
+    #blog .container div.two-articles article,
+    #blog .container .four-articles article{
+        margin-bottom: 2rem;
+    }
+
+    header {
+        padding: 0rem 6rem;
+    }
+
+    header #mobile{
+        display: block;
+    }
+
+    header #menu{
+        display: none;
+    }
+
+    header .icon-mobile {
+        display: block;
+        max-width: 4rem;
+        margin-left: 16rem;
+        cursor: pointer;
+    }
+
+    header #mobile #submenu{
+        flex-direction: column;
+        position: absolute;
+        top: 11rem;
+        right: 11rem;
+        width:11rem;
+        font-size: 1.5rem;
+        background-color: #fff;
+        border-radius: 1rem;
+    }
+
+    header #mobile #submenu a{
+        padding: 1rem;
+        color: #0C026B;
+        text-decoration: none;
+        border-bottom: 0.1rem solid #D1D1D1;
+    }
+
+    header #mobile #submenu a:last-child{
+        border-bottom: none;
+    }
+
+    header #mobile #submenu a:hover{
+        color: #FF62E9;
     }
 }
