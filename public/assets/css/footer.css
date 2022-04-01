@@ -52,10 +52,6 @@
     background-color: #fff;
 }
 
-#footer .social .icons img{
-    width: 2rem;
-    height: 2rem;
-}
 
 @media  (max-width:400px) {
     #footer .boost h3{

@@ -30,12 +30,21 @@ $(document).ready(function(){
         }
     });
     
-    
-
-    
 })
 
 function loadFile(event){
     const img = document.getElementById("show-image");
     img.src = URL.createObjectURL(event.target.files[0]);
 };
+
+function toggleMenu() {
+
+    const submenu = document.getElementById("submenu");
+
+    if (submenu.style.display == 'none' || submenu.style.display == '') {
+        submenu.style.display = "flex";
+    } else {
+        submenu.style.display = "none";
+    }
+
+}

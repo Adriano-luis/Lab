@@ -13,7 +13,7 @@
             <div class="infos">
                 <h1>Laboratório de <span>estratégias</span> para o seu negócio</h1>
             </div>
-            <button>Quero <b>impulsionar</b> a minha <b>empresa</b></button>
+            <button class="makeContact">Quero <b>impulsionar</b> a minha <b>empresa</b></button>
             <img class="image-arrow" src="{{asset('assets/images/arrow-down.png')}}" alt="Uma seta branca apontando para baixo" title="Seta branca para baixo">
         </div>
     </div>
