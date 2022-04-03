@@ -626,6 +626,10 @@ header ul li a{
         max-width: 33rem;
     }
 
+    #blog .container{
+        padding-left: 0rem;
+    }
+
     #about .container p{
         text-align: center;
         text-justify: justify;
@@ -702,13 +706,33 @@ header ul li a{
         color: #FF62E9;
     }
 
-    #article aside{
+    #article aside,
+    #contact aside{
         display: none;
     }
 
     #article .middle{
         margin-left: 0.55rem;
         padding: 0 2rem;
+    }
+
+    #contact{
+        max-width: 100%;
+    }
+
+    #contact .middle{
+        width: 39.6rem;
+        margin-left: 0rem;
+        padding: 0px 3rem;
+    }
+
+    #contact .contact-main{
+        max-width: 100rem;
+    }
+
+    #contact .contact-main form{
+        margin: 0 auto;
+        max-width: 30rem;
     }
 
     #article .main-article {
@@ -722,5 +746,9 @@ header ul li a{
 
     #article .main-article .infos-articles span {
         margin-right: 2.5rem;
+    }
+
+    #footer .social .icons{
+        margin-left: 1rem;
     }
 }
