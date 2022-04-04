@@ -18,7 +18,7 @@ $(document).ready(function(){
             'blog',
             'services'
         ];
-        if(title == 'Lab - Artigo' || title == 'Lab - Contato'){
+        if(title == 'Lab. Digital Marketin - Artigo' || title == 'Lab. Digital Marketing - Contato'){
             const link = $(this).attr('aria-label');
             const uri = $('meta[name=URL_BASE]').attr('content');
             links.forEach(key => {
