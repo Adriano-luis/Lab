@@ -16,6 +16,19 @@ body{
     margin: auto;
 }
 
+.whatsapp{
+    position: fixed;
+    bottom: 5rem;
+    right: 3rem;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.whatsapp img{
+    width: 100%;
+    max-width:5rem;
+}
+
 header{
     margin: 5rem 0 10rem 0rem;
 }
@@ -436,17 +449,27 @@ header ul li a{
 }
 
 @media (min-width: 1440px) {
+    #first {
+        max-width: 93%;
+    }
+
     #blog .container div.two-articles .circle-yellow {
         top: 124rem;
+        right: 1rem;
     }
 
     #blog .container div.two-articles .half {
         top: 145.1rem;
-        right: 23.7rem;
+        right: 33.7rem;
     }
 
     #blog .container div.two-articles .circle {
         top: 162rem;
+        right: 25.4rem;
+    }
+
+    #blog .container div.two-articles .filling {
+        width: 45rem;
     }
 }
 
