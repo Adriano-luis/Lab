@@ -44,7 +44,7 @@
           </div>
           <div class="form-group phone">
             <label for="phone">Telefone</label><br>
-            <input type="checkbox" name="usePhone" {{$service->phone === auth()->user()->phone ? 'checked':''}}><span> Usar telefone: {{auth()->user()->phone}}</span><br><br>
+            <input type="checkbox" name="usePhone" {{$service->phone === auth()->user()->phone && $service->phone != '' ? 'checked':''}}><span> Usar telefone: {{auth()->user()->phone}}</span><br><br>
             <p>Outro:</p>
             <input type="text" class="form-control" id="phone" aria-describedby="phone" placeholder="Digite sem espaços ou carácteres especiais" name="phone" value="{{isset($service->phone) ? $service->phone : ''}}">
             {{ $errors->first('phone') ? $errors->first('phone') : '' }}

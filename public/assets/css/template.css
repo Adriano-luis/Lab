@@ -448,6 +448,10 @@ header ul li a{
     border-left-color: #FF62E9 !important;
 }
 
+#article .main-article .full-text ul{
+    padding-inline-start: 4rem;
+}
+
 @media (max-width: 1042px){
     header ul li:first-child {
         margin-left: 3rem;

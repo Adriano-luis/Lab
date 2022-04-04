@@ -29,7 +29,7 @@ Artigo
         </div>
 
         <div class="full-text">
-            <?= $article->text ?>
+            <?php echo $article->text ?>
         </div>
     </main>
 </div>
