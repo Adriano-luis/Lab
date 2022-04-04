@@ -127,6 +127,7 @@ class BlogController extends Controller
         }
         $request->validate($rules,$feedback);
         $request->input('useAuthor') == 'on' ? $author = auth::user()->name : $author = $request->author;
+        $request->input('active') == 'on' ? $active = '1' : $active = '0';
 
         if($request->file('image')){
 
@@ -141,7 +142,8 @@ class BlogController extends Controller
                 'image_alt' => $request->image_alt,
                 'image_title' => $request->image_title,
                 'text' => $request->text,
-                'author' => $author
+                'author' => $author,
+                'active' => $active
             ]);
         }
 
@@ -151,7 +153,8 @@ class BlogController extends Controller
             'image_alt' => $request->image_alt,
             'image_title' => $request->image_title,
             'text' => $request->text,
-            'author' => $author
+            'author' => $author,
+            'active' => $active
         ]);
 
         return redirect()->route('blogs.show',['blog'=>$blog->id]);

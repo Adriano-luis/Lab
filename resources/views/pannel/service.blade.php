@@ -14,6 +14,9 @@
                                 <span class="username px-3">
                                     ID: {{$service->id}}
                                 </span>
+                                <span class="active px-3">
+                                    {{$service->active == '1' ? 'Ativo': 'Oculto'}}
+                                </span>
                             </div>
                             <span class="image-service">
                                 <img style="width: 71px" src="{{asset('storage/'.$service->image)}}" alt="{{$service->image_alt}}" title="{{$service->image_title}}" >

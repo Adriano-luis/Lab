@@ -54,6 +54,11 @@
             <input type="text" class="form-control" id="author" aria-describedby="autor" placeholder="Digite o nome do autor" name="author" value="{{isset($article->author) ? $article->author : ''}}">
             {{ $errors->first('author') ? $errors->first('author') : '' }}
           </div>
+          <div class="form-group active">
+            <label for="active">Ativo/oculto</label>
+            <input type="checkbox" class="form-control active" id="active" name="active" {{$article->active === '1' ? 'checked':''}}>
+            {{ $errors->first('active') ? $errors->first('active') : '' }}
+          </div>
           <button type="submit" class="btn btn-success">Salvar</button>
     </form>
   </main>

@@ -138,6 +138,7 @@ class ServiceController extends Controller
         }
         $request->validate($rules,$feedback);
         $request->input('usePhone') == 'on' ? $phone = auth::user()->phone : $phone = $request->phone;
+        $request->input('active') == 'on' ? $active = '1' : $active = '0';
 
         if($request->file('image')){
 
@@ -151,7 +152,8 @@ class ServiceController extends Controller
                 'image' => $image_urn,
                 'image_alt' => $request->image_alt,
                 'image_title' => $request->image_title,
-                'phone' => $phone
+                'phone' => $phone,
+                'active' => $active
             ]);
         }
 
@@ -160,7 +162,8 @@ class ServiceController extends Controller
             'description' => $request->description,
             'image_alt' => $request->image_alt,
             'image_title' => $request->image_title,
-            'phone' => $phone
+            'phone' => $phone,
+            'active' => $active
         ]);
 
         return redirect()->route('services.index',['service'=>$service->id]);

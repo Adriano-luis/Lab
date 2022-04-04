@@ -60,6 +60,13 @@
     font-weight: 400; 
 }
 
+#pannel-blog main .card-header span.active,
+#pannel-service .card-header span.active{
+    width: 100%;
+    max-width: 147px;
+    text-align: end;
+}
+
 #pannel-blog-show {
     display: flex;
     flex-direction: row;
@@ -157,9 +164,16 @@
     height: 45px;
 
 }
+
 #pannel-blog-edit .form-group.author #author,
 #pannel-service-edit .form-group.phone #phone {
     max-width: 300px;
+}
+
+#pannel-blog-edit .form-control.active,
+#pannel-service-edit .form-control.active {
+    max-width: 2%;
+    margin-left: 20px;
 }
 
 #pannel-blog-edit form,

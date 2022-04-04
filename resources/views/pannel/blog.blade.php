@@ -14,6 +14,9 @@
                                 <span class="userid px-3">
                                     ID: {{$article->id}}
                                 </span>
+                                <span class="active px-3">
+                                    {{$article->active == '1' ? 'Ativo': 'Oculto'}}
+                                </span>
                             </div><br>
                             <div class="px-3 title-card">
                                 <b><p>{{$article->title}}</p></b>

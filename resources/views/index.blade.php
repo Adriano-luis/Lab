@@ -25,7 +25,7 @@
     <div class="container">
         <div class="top-row">
             @foreach ($services as $service)   
-                @if ($service->id < 5)     
+                @if ($service->id < 5 && $service->active == 1)     
                     <article>
                         <figure>
                             <img src="{{asset('storage/'.$service->image)}}" alt="{{$service->image_alt}}" title="{{$service->image_title}}">
@@ -39,7 +39,7 @@
         </div>
         <div class="bottom-row">
             @foreach ($services as $service)   
-                @if ($service->id > 4)     
+                @if ($service->id > 4 && $service->active == 1)     
                     <article>
                         <figure>
                             <img src="{{asset('storage/'.$service->image)}}" alt="{{$service->image_alt}}" title="{{$service->image_title}}">
@@ -72,7 +72,7 @@
         <h2>Blog</h2>
         <div class="two-articles">
             @foreach ($articles as $article)    
-                @if($article->id < 3)
+                @if($article->id < 3 && $article->active == 1)
                     <article>
                         <h3>{{$article->title}}</h3>
                         <p>{{$article->description}}</p>
@@ -87,7 +87,7 @@
         </div>
         <div class="four-articles">
             @foreach ($articles as $article)    
-                @if($article->id > 2)
+                @if($article->id > 2 && $article->active == 1)
                     <article>
                         <h3>{{$article->title}}</h3>
                         <p>{{$article->description}}</p>

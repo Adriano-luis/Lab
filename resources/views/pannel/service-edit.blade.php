@@ -49,6 +49,11 @@
             <input type="text" class="form-control" id="phone" aria-describedby="phone" placeholder="Digite sem espaços ou carácteres especiais" name="phone" value="{{isset($service->phone) ? $service->phone : ''}}">
             {{ $errors->first('phone') ? $errors->first('phone') : '' }}
           </div>
+          <div class="form-group active">
+            <label for="active">Ativo/oculto</label>
+            <input type="checkbox" class="form-control active" id="active" name="active" {{$service->active === '1' ? 'checked':''}}>
+            {{ $errors->first('active') ? $errors->first('active') : '' }}
+          </div>
           <button type="submit" class="btn btn-success">Salvar</button>
     </form>
   </main>
