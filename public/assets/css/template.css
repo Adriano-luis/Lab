@@ -435,6 +435,21 @@ header ul li a{
     padding-inline-start: 4rem;
 }
 
+@media (min-width: 1440px) {
+    #blog .container div.two-articles .circle-yellow {
+        top: 124rem;
+    }
+
+    #blog .container div.two-articles .half {
+        top: 145.1rem;
+        right: 23.7rem;
+    }
+
+    #blog .container div.two-articles .circle {
+        top: 162rem;
+    }
+}
+
 @media (max-width: 1042px){
     header ul li:first-child {
         margin-left: 3rem;
