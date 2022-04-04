@@ -10,7 +10,7 @@
         @csrf
         <div class="form-group title">
             <label for="title">Titulo</label>
-            <input maxlength="23" type="text" class="form-control" id="title" aria-describedby="titulo" placeholder="Digite o titulo" name="title" value="{{isset($service->title) ? $service->title: '' }}">
+            <input type="text" class="form-control" id="title" aria-describedby="titulo" placeholder="Digite o titulo" name="title" value="{{isset($service->title) ? $service->title: '' }}">
             {{ $errors->first('title') ? $errors->first('title') : '' }}
           </div>
           <div class="form-group image">
