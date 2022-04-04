@@ -19,9 +19,9 @@
     </section>
     <section class="social">
         <div class="icons">
-            <img src="{{asset('assets/images/facebook.webp')}}" alt="Logo do Facebook na cor rosa" title="Logo rosa">
-            <img src="{{asset('assets/images/instagram.webp')}}" alt="Logo do Instagram na cor rosa" title="Logo rosa">
-            <img src="{{asset('assets/images/twitter.webp')}}" alt="Logo do Twitter na cor rosa" title="Logo rosa">
+            <a href="https://www.facebook.com/labmktdigitalbr/" target="blank"><img src="{{asset('assets/images/facebook.webp')}}" alt="Logo do Facebook na cor rosa" title="Logo rosa"></a>
+            <a href="https://www.instagram.com/lab.digitalmkt/" target="blank"><img src="{{asset('assets/images/instagram.webp')}}" alt="Logo do Instagram na cor rosa" title="Logo rosa"></a>
+            <a href="https://www.linkedin.com/company/lab-digital-mkt/" target="blank"> <img src="{{asset('assets/images/linkedin.webp')}}" alt="Logo do Twitter na cor rosa" title="Logo rosa"></a>
         </div>
     </section>
 </footer>
