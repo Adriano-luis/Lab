@@ -55,7 +55,7 @@
 </main>
 <section id="about">
     <div class="container">
-        <h2>Sobre a <span>Lab Digital Mkt</span></h2>
+        <h2>Sobre a <span>Lab. Digital Mkt</span></h2>
         <p>
             Oferecemos muito mais que estratégias de marketing digital 360°. Queremos proporcionar uma parceria de sucesso para alavancar o alcance do seu negócio através de estratégias personalizadas que se encaixam nas necessidades da sua empresa e do seu cliente.
         </p>
