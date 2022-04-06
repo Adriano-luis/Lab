@@ -90,7 +90,8 @@ header ul li a{
 
 #first aside img,
 #contact aside img,
-#article aside img{
+#article aside img,
+#blogs aside img{
     max-height: 100vh;
     margin-left: -0.5rem;
     margin-right: -1rem;
@@ -98,7 +99,8 @@ header ul li a{
 
 #first .middle,
 #contact .middle,
-#article .middle{
+#article .middle,
+#blogs .middle{
     width: 100%;
     height: 100%;
     max-width: 100.5rem;
@@ -110,7 +112,8 @@ header ul li a{
 
 #first .middle .container,
 #contact .middle .container,
-#article .middle .container{
+#article .middle .container,
+#blogs .middle .container{
     width: 100%;
     max-width: 41rem;
     margin: auto;
@@ -119,7 +122,8 @@ header ul li a{
 
 #first .middle .container .infos > h1,
 #contact .middle .container > h1,
-#article .middle .container > h1{
+#article .middle .container > h1,
+#blogs .middle .container > h1{
     font-size: 4rem;
     font-weight: 700;
     text-align: center;
@@ -221,14 +225,21 @@ header ul li a{
     max-width: 17rem;
 }
 
-#blog .container article h3{
+#blogs .blogs-main article{
+    width: 100%;
+    max-width: 22.5rem;
+}
+
+#blog .container article h3,
+#blogs .blogs-main article h3{
     margin-bottom: 1rem;
     color: #0C026B;
     font-size: 1.8rem;
     font-weight: 700;
 }
 
-#blog .container article p{
+#blog .container article p,
+#blogs .blogs-main article p{
     margin-bottom: 1rem;
     color: rgba(26, 26, 26, 0.6);
     font-size: 1.4rem;
@@ -237,6 +248,7 @@ header ul li a{
 }
 
 #blog .container article a,
+#blogs .blogs-main article a,
 #services .container a{
     color: #FF62E9;
     font-size: 1.4rem;
@@ -323,7 +335,8 @@ header ul li a{
 }
 
 #contact .top,
-#article .top{
+#article .top,
+#blogs .top{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -331,22 +344,26 @@ header ul li a{
 }
 
 #contact header,
-#article header{
+#article header,
+#blogs header{
     margin: 3rem 0 2rem 0rem;
 }
 
 #contact .middle,
-#contact .middle{
+#contact .middle,
+#blogs .middle{
     height: 23.23rem;
 }
 
 #contact .middle .container > h1,
-#article .middle .container > h1{
+#article .middle .container > h1,
+#blogs .middle .container > h1{
     font-size: 2.5rem;
 }
 
 #contact aside img,
-#article aside img{
+#article aside img,
+#blogs aside img{
     max-height: 23.2rem;
 }
 
@@ -356,6 +373,20 @@ header ul li a{
     width: 100%;
     height: 58rem;
     background-color: #FFF;
+}
+
+#blogs .blogs-main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 108rem;
+    height: 25rem;
+    margin: 10rem auto 45rem auto;
+    background-color: #FFF;
+}
+
+#blogs .blogs-main article{
+    margin: 2rem 2.25rem;
 }
 
 
@@ -480,7 +511,8 @@ header ul li a{
 
     #first .middle .container .infos > h1,
     #contact .middle .container > h1,
-    #article .middle .container > h1{
+    #article .middle .container > h1,
+    #blogs .middle .container > h1{
         font-size: 3.5rem;
     }
 
@@ -732,7 +764,8 @@ header ul li a{
     }
 
     #article aside,
-    #contact aside{
+    #contact aside,
+    #blogs aside{
         display: none;
     }
 
@@ -741,11 +774,13 @@ header ul li a{
         padding: 0 2rem;
     }
 
-    #contact{
+    #contact,
+    #blogs{
         max-width: 100%;
     }
 
-    #contact .middle{
+    #contact .middle,
+    #blogs .middle{
         width: 39.6rem;
         margin-left: 0rem;
         padding: 0px 3rem;
@@ -771,6 +806,12 @@ header ul li a{
 
     #article .main-article .infos-articles span {
         margin-right: 2.5rem;
+    }
+
+    #blogs .blogs-main {
+        justify-content: center;
+        max-width: 21rem;
+        margin: 10rem auto 45rem auto;
     }
 
     #footer .social .icons{

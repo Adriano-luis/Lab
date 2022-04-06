@@ -19,6 +19,11 @@ class HomeController extends Controller
         return view('contact');
     }
 
+    public function blog(){
+        $articles = Blog::orderBy('id', 'DESC')->paginate(12);
+        return view('blog',['articles' => $articles]);
+    }
+
     public function article(Blog $article){
         return view('article',['article' => $article]);
     }

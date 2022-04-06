@@ -4,7 +4,7 @@
         <ul>
             <li><a class="pageScroll" href="#services" aria-label="services">Serviços</a></li>
             <li><a class="pageScroll" href="#about" aria-label="about">Sobre</a></li>
-            <li><a class="pageScroll" href="#blog" aria-label="blog">Blog</a></li>
+            <li><a class="pageScroll" href="{{route('blog')}}">Blog</a></li>
             <li><a href="{{route('contact')}}">Contato</a></li>
         </ul>
     </nav>
@@ -13,7 +13,7 @@
         <div id="submenu">
             <a class="pageScroll" href="#services" aria-label="services">Serviços</a>
             <a class="pageScroll" href="#about" aria-label="about">Sobre</a>
-            <a class="pageScroll" href="#blog" aria-label="blog">Blog</a>
+            <a class="pageScroll" href="{{route('blog')}}">Blog</a>
             <a href="{{route('contact')}}">Contato</a>
         </div>
     </nav>

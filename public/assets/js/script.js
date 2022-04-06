@@ -15,7 +15,6 @@ $(document).ready(function(){
     $('.pageScroll').on("click",function(e){
         const links = [
             'about',
-            'blog',
             'services'
         ];
         if(title == 'Lab. Digital Marketing - Artigo' || title == 'Lab. Digital Marketing - Contato'){
@@ -29,6 +28,14 @@ $(document).ready(function(){
             
         }
     });
+    const pagina = document.getElementById("blogs").offsetWidth;
+    
+    if(pagina <= 473){
+        tamanho = document.getElementById("blogs-main").offsetHeight;
+        altura = tamanho + 800;
+
+        document.getElementById("blogs-main").style.marginBottom = altura+'px';
+    }
     
 })
 
