@@ -9,6 +9,14 @@
     <link rel="icon" type="image/png" href="{{asset('assets/images/Logo-lab.webp')}}">
     <link rel="stylesheet" href="{{asset('assets/css/template.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/footer.css')}}">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW25LXTHJF"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-WW25LXTHJF');
+    </script>
 </head>
 <body>
     

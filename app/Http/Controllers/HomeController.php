@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Service;
 use App\Blog;
 use App\User;
+use Spatie\Analytics\Period;
+use Analytics;
 
 class HomeController extends Controller
 {
@@ -26,5 +28,10 @@ class HomeController extends Controller
 
     public function article(Blog $article){
         return view('article',['article' => $article]);
+    }
+
+    public function teste(){
+        $teste = Analytics::fetchMostVisitedPages(Period::days(7));
+        dd($teste);
     }
 }
