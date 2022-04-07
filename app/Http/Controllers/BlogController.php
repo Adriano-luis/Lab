@@ -27,8 +27,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return redirect()->back();
-        //return view('pannel.blog-edit', ['edit' => false]);
+        return view('pannel.blog-edit', ['edit' => false]);
     }
 
     /**
@@ -39,18 +38,18 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        return redirect()->back();
-        /*$rules = [
+        $rules = [
             'title' => 'required',
             'image' => 'required|file|mimes:png,jpg,jpeg',
             'text' => 'required',
-            'author' => 'required',
         ];
         $feedback = [
             'required' => 'Você precisa me preencher!' 
         ];
 
         $request->validate($rules,$feedback);
+        $request->input('useAuthor') == 'on' ? $author = auth::user()->name : $author = $request->author;
+        $request->input('active') == 'on' ? $active = '1' : $active = '0';
 
         $image = $request->file('image');
         $image_urn = $image->store('images/articles','public');
@@ -62,11 +61,12 @@ class BlogController extends Controller
             'image_title' => $request->image_title,
             'image_alt' => $request->image_alt,
             'text' => $request->text,
-            'author' => $request->author
+            'author' => $author,
+            'active' => $active
         ]);
 
         $article = Blog::orderBy('created_at', 'desc')->get()->first();
-        return redirect()->route('blogs.show',['blog' => $article->id]);*/
+        return redirect()->route('blogs.show',['blog' => $article->id]);
     }
 
     /**
@@ -168,8 +168,7 @@ class BlogController extends Controller
      */
     public function destroy(Blog $blog)
     {
-        //Blog::where('id', $blog->id)->delete();
-        //return redirect()->route('blogs.index');
-        return redirect()->back();
+        Blog::where('id', $blog->id)->delete();
+        return redirect()->route('blogs.index');
     }
 }

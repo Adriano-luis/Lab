@@ -83,6 +83,15 @@
     padding-top: 10px;
 }
 
+#pannel-blog-show > aside.edit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#pannel-blog-show > aside.edit a{
+   margin-right: 30px;
+}
+
 #pannel-blog-show > section {
     margin-bottom: 100px;
 }

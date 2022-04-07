@@ -242,6 +242,11 @@ return [
                     'icon' => 'far fa-fw fa-file',
                     'url'  => 'pannel/blogs',
                 ],
+                [
+                    'text' => 'Nova matéria', 
+                    'icon' => 'nav-icon fas fa-edit',
+                    'url'  => 'pannel/blogs/create',
+                ],
             ],
         ],
         [

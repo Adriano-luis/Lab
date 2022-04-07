@@ -81,6 +81,10 @@ header ul li a{
     height: 60rem;
 }
 
+#blog {
+    height: 66rem;
+}
+
 #first{
     position: fixed;
     height: 100vh;
@@ -211,7 +215,10 @@ header ul li a{
 
 #blog .container div.four-articles{
     display: flex;
-    justify-content: space-between;
+}
+
+#blog .container .four-articles article {
+    margin-right: 10rem;
 }
 
 #blog .container div.two-articles article{

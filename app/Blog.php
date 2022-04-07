@@ -14,6 +14,7 @@ class Blog extends Model
         'image_alt',
         'image_title',
         'text',
-        'author'
+        'author',
+        'active',
     ];
 }

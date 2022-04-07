@@ -3,6 +3,11 @@
     <main id="pannel-blog-show">
         <aside class="edit">
             <a href="{{route('blogs.edit',$article->id)}}"><button class="btn btn-success">Editar</button></a>
+            <form action="{{route('blogs.destroy',$article->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger">Excluir</button>
+            </form>
         </aside>
         <section>
             <article class="col box-shadow">

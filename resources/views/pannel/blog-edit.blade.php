@@ -16,7 +16,7 @@
           <div class="form-group image">
             <label for="image">Imagem da Matéria</label><br>
             <div class="thumb">
-              <img id="show-image" src="{{$article->image ? asset('storage/'.$article->image) : asset('assets/images/thumb.jpeg')}}">
+              <img id="show-image" src="{{isset($article->image) ? asset('storage/'.$article->image) : asset('assets/images/thumb.jpeg')}}">
             </div>
                 <div class="input-group">
                     <div class="custom-file">
@@ -49,14 +49,14 @@
           </div>
           <div class="form-group author">
             <label for="author">Autor</label><br>
-            <input type="checkbox" name="useAuthor" {{$article->author === auth()->user()->name ? 'checked':''}}><span> Usar autor: {{auth()->user()->name }}</span><br><br>
+            <input type="checkbox" name="useAuthor" {{isset($article->author) && $article->author === auth()->user()->name ? 'checked':''}}><span> Usar autor: {{auth()->user()->name }}</span><br><br>
             <p>Outro:</p>
             <input type="text" class="form-control" id="author" aria-describedby="autor" placeholder="Digite o nome do autor" name="author" value="{{isset($article->author) ? $article->author : ''}}">
             {{ $errors->first('author') ? $errors->first('author') : '' }}
           </div>
           <div class="form-group active">
             <label for="active">Ativo/oculto</label>
-            <input type="checkbox" class="form-control active" id="active" name="active" {{$article->active === '1' ? 'checked':''}}>
+            <input type="checkbox" class="form-control active" id="active" name="active" {{isset($article->active) && $article->active === '1' ? 'checked':''}}>
             {{ $errors->first('active') ? $errors->first('active') : '' }}
           </div>
           <button type="submit" class="btn btn-success">Salvar</button>
