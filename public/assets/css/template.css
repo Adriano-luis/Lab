@@ -224,7 +224,7 @@ header ul li a{
 #blog .container div.two-articles article{
     width: 100%;
     max-width: 18rem;
-    margin-right: 11rem;
+    margin-right: 8rem;
 }
 
 #blog .container article{
@@ -484,6 +484,10 @@ header ul li a{
 
 #article .main-article .full-text ul{
     padding-inline-start: 4rem;
+}
+
+#article .main-article .full-text li p{
+    margin-top: -13pt !important;
 }
 
 @media (min-width: 1440px) {

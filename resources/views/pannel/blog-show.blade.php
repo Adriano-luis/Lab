@@ -22,7 +22,7 @@
                         <span><img src="{{asset('assets/images/calendar.png')}}" alt="Icone de calendário na cor rosa" title="Calendário rosa"> {{$article->created_at->format('F d,Y')}}</span>
                         <span><img src="{{asset('assets/images/user.webp')}}" alt="Icone de usuário na cor rosa" title="Usuário rosa"> Post by: {{$article->author}}</span>
                     </div><br><br>
-                    <div class="row fullText">
+                    <div class="fullText">
                         <?php echo $article->text ?>
                     </div><br>
                     <hr><br><br>

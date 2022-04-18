@@ -131,9 +131,22 @@
     margin-bottom: 2px;
  }
 
-#pannel-blog-show section .box-shadow .fullText {
+ #pannel-blog-show section .box-shadow .col .full-text {
     font-size: 15px;
     font-weight: 400;
+}
+
+#pannel-blog-show section .box-shadow  blockquote{
+    border-left: 7px solid #FF62E9;
+    border-left-color: #FF62E9 !important;
+}
+
+#pannel-blog-show section .box-shadow  ul{
+    padding-inline-start: 40px;
+}
+
+#pannel-blog-show section .box-shadow  li p{
+    margin-top: -13pt !important;
 }
 
 #pannel-blog-edit .form-group.title,
