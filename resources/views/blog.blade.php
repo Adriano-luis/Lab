@@ -25,7 +25,7 @@ Blog
                 <article>
                     <h3>{{$article->title}}</h3>
                     <p>{{$article->description}}</p>
-                    <a href="{{route('article',['article' => $article->id])}}">Continue Lendo</a>
+                    <a href="{{route('article',['article' => $article->urn])}}">Continue Lendo</a>
                 </article>
             @endif  
         @endforeach

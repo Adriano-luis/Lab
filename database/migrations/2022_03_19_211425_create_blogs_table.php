@@ -24,6 +24,7 @@ class CreateBlogsTable extends Migration
             $table->string('image_title')->nullable();
             $table->string('author');
             $table->string('active');
+            $table->string('urn')->unique();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

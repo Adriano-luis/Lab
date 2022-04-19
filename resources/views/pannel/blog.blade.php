@@ -7,7 +7,7 @@
     <main class="row">
         @foreach ($articles as $article)
             <div class="col-md-3">
-                <a href="{{route('blogs.show',$article->id)}}"> 
+                <a href="{{route('blogs.show',$article->urn)}}"> 
                     <div class="card card-widget">
                         <div class="card-header">
                             <div class="card-comment d-flex">

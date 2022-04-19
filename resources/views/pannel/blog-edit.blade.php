@@ -1,6 +1,9 @@
 @extends('adminlte::page')
 @section('content')
   <main id="pannel-blog-edit">
+    @if ($exist)
+        <div class="exist">Matéria já existe!</div>
+    @endif
     @if ($edit)
       <form action="{{route('blogs.update',$article->id)}}" method="POST" enctype="multipart/form-data">
     @method('PATCH')
@@ -12,7 +15,14 @@
             <label for="titile">Titulo da Máteria</label>
             <input type="text" class="form-control" id="titile" aria-describedby="titulo" placeholder="Digite o titulo" name="title" value="{{isset($article->title) ? $article->title: '' }}">
             {{ $errors->first('title') ? $errors->first('title') : '' }}
+        </div><hr>
+          @if ($edit)
+          <div class="form-group title">
+            <label for="titile">URN</label>
+            <input type="text" class="form-control" id="URN" aria-describedby="URN" placeholder="Digite a URN" name="urn" value="{{isset($article->urn) ? $article->urn: '' }}">
+            {{ $errors->first('urn') ? $errors->first('urn') : '' }}
           </div><hr>
+          @endif
           <div class="form-group image">
             <label for="image">Imagem da Matéria</label><br>
             <div class="thumb">

@@ -490,6 +490,11 @@ header ul li a{
     margin-top: -13pt !important;
 }
 
+#article .main-article .full-text li{
+    margin-bottom: 10px !important;
+    white-space: inherit !important;
+}
+
 @media (min-width: 1440px) {
     #first {
         max-width: 93%;

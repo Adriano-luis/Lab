@@ -76,7 +76,7 @@
                     <article>
                         <h3>{{$article->title}}</h3>
                         <p>{{$article->description}}</p>
-                        <a href="{{route('article',['article' => $article->id])}}">Continue Lendo</a>
+                        <a href="{{route('article',['article' => $article->urn])}}">Continue Lendo</a>
                     </article>
                 @endif
             @endforeach
@@ -86,13 +86,15 @@
             <div class="filling"></div>
         </div>
         <div class="four-articles">
+            <?php $cont = 0; ?>
             @foreach ($articles as $article)    
-                @if($article->id > 2 && $article->active == 1)
+                @if($article->id > 2 && $article->active == 1 && $cont < 4)
                     <article>
                         <h3>{{$article->title}}</h3>
                         <p>{{$article->description}}</p>
-                        <a href="{{route('article',['article' => $article->id])}}">Continue Lendo</a>
+                        <a href="{{route('article',['article' => $article->urn])}}">Continue Lendo</a>
                     </article>
+                    <?php $cont++; ?>
                 @endif
             @endforeach
         </div>

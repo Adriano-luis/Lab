@@ -27,7 +27,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        return view('pannel.blog-edit', ['edit' => false]);
+        return view('pannel.blog-edit', ['edit' => false,'exist'=>false]);
     }
 
     /**
@@ -41,18 +41,32 @@ class BlogController extends Controller
         $rules = [
             'title' => 'required',
             'image' => 'required|file|mimes:png,jpg,jpeg',
-            'text' => 'required',
+            'text' => 'required'
         ];
         $feedback = [
-            'required' => 'Você precisa me preencher!' 
+            'required' => 'Você precisa me preencher!'
         ];
 
         $request->validate($rules,$feedback);
         $request->input('useAuthor') == 'on' ? $author = auth::user()->name : $author = $request->author;
         $request->input('active') == 'on' ? $active = '1' : $active = '0';
-
         $image = $request->file('image');
         $image_urn = $image->store('images/articles','public');
+
+        $urn = $request->title;
+        $urn = explode(" ",$urn);
+        $urn = implode("-",$urn);
+        $urn = strtolower($urn);
+        function tirarAcentos($string){
+            return preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/"),explode(" ","a A e E i I o O u U n N"),$string);
+        }
+        $urn = str_replace('?', "", $urn);
+        $urn = tirarAcentos($urn);
+        $exist = Blog::where('urn',$urn)->first();
+        if($exist){
+            return view('pannel.blog-edit', ['edit' => false,'exist'=>true]);
+        }
+
         Blog::create([
             'user_id' => Auth::user()->id,
             'title' => $request->title,
@@ -62,21 +76,24 @@ class BlogController extends Controller
             'image_alt' => $request->image_alt,
             'text' => $request->text,
             'author' => $author,
-            'active' => $active
+            'active' => $active,
+            'urn' => $urn,
         ]);
 
         $article = Blog::orderBy('created_at', 'desc')->get()->first();
-        return redirect()->route('blogs.show',['blog' => $article->id]);
+        return redirect()->route('blogs.show',['blog' => $article->urn]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Blog  $blog
+     * @param  \Illuminate\Http\Request  $request
+     * @param  string  $data
      * @return \Illuminate\Http\Response
      */
-    public function show(Blog $blog)
+    public function show($urn)
     {
+        $blog = Blog::where('urn',$urn)->first();
         return view('pannel.blog-show',['article' => $blog]);
     }
 
@@ -89,7 +106,7 @@ class BlogController extends Controller
     public function edit(Blog $blog)
     {
         
-        return view('pannel.blog-edit',['article' => $blog,'edit' => true]);
+        return view('pannel.blog-edit',['article' => $blog,'edit' => true, 'exist'=>false]);
     }
 
     /**
@@ -105,10 +122,12 @@ class BlogController extends Controller
             'title' => 'required',
             'image' => 'file|mimes:png,jpg,jpeg',
             'text' => 'required',
-            'author' => 'required'
+            'author' => 'required',
+            'urn' => 'unique:blogs,urn'
         ];
         $feedback = [
-            'required' => 'Você esqueceu de me preencher!'
+            'required' => 'Você esqueceu de me preencher!',
+            'urn.unique' => 'Essa urn já existe!'
         ];
 
         if (!$blog){
@@ -128,6 +147,14 @@ class BlogController extends Controller
         $request->validate($rules,$feedback);
         $request->input('useAuthor') == 'on' ? $author = auth::user()->name : $author = $request->author;
         $request->input('active') == 'on' ? $active = '1' : $active = '0';
+        $urn = $request->urn;
+        $urn = explode(" ",$urn);
+        $urn = implode("-",$urn);
+        $urn = strtolower($urn);
+        function tirarAcentos($string){
+            return preg_replace(array("/(á|à|ã|â|ä)/","/(Á|À|Ã|Â|Ä)/","/(é|è|ê|ë)/","/(É|È|Ê|Ë)/","/(í|ì|î|ï)/","/(Í|Ì|Î|Ï)/","/(ó|ò|õ|ô|ö)/","/(Ó|Ò|Õ|Ô|Ö)/","/(ú|ù|û|ü)/","/(Ú|Ù|Û|Ü)/","/(ñ)/","/(Ñ)/"),explode(" ","a A e E i I o O u U n N"),$string);
+        }
+        $urn = str_replace('?', "", $urn);
 
         if($request->file('image')){
 
@@ -143,7 +170,8 @@ class BlogController extends Controller
                 'image_title' => $request->image_title,
                 'text' => $request->text,
                 'author' => $author,
-                'active' => $active
+                'active' => $active,
+                'urn' => $urn
             ]);
         }
 
@@ -154,10 +182,11 @@ class BlogController extends Controller
             'image_title' => $request->image_title,
             'text' => $request->text,
             'author' => $author,
-            'active' => $active
+            'active' => $active,
+            'urn' => $urn
         ]);
-
-        return redirect()->route('blogs.show',['blog'=>$blog->id]);
+        $blog = Blog::where('id',$blog->id)->first();
+        return redirect()->route('blogs.show',['blog'=>$blog->urn]);
     }
 
     /**

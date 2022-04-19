@@ -149,10 +149,20 @@
     margin-top: -13pt !important;
 }
 
+#pannel-blog-show section .box-shadow  li{
+    margin-bottom: 10px;
+    white-space: inherit !important;
+}
+
 #pannel-blog-edit .form-group.title,
 #pannel-service-edit .form-group.title {
     padding-top:1rem;
     max-width: 300px;
+}
+
+#pannel-blog-edit .exist{
+    font-weight:bold;
+    color: #ff0000
 }
 
 #pannel-blog-edit .form-group.image .input-group,
