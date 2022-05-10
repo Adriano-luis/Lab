@@ -237,6 +237,29 @@ header ul li a{
     max-width: 22.5rem;
 }
 
+#blogs ul.pagination{
+    display: flex;
+    width: 100%;
+    max-width: 108rem;
+    margin: auto;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 20rem;
+}
+
+#blogs ul li{
+    margin: 0 1rem;
+    color: #0C026B;
+    border-radius: 1rem 5rem 0 0;
+}
+
+#blogs ul li a{
+    color: #FF62E9;
+    text-decoration: none;
+}
+
 #blog .container article h3,
 #blogs .blogs-main article h3{
     margin-bottom: 1rem;
@@ -388,7 +411,7 @@ header ul li a{
     width: 100%;
     max-width: 108rem;
     height: 25rem;
-    margin: 10rem auto 45rem auto;
+    margin: 10rem auto 25rem auto;
     background-color: #FFF;
 }
 

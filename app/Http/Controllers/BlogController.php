@@ -147,6 +147,7 @@ class BlogController extends Controller
         $request->validate($rules,$feedback);
         $request->input('useAuthor') == 'on' ? $author = auth::user()->name : $author = $request->author;
         $request->input('active') == 'on' ? $active = '1' : $active = '0';
+        dd($request);
         $urn = $request->urn;
         $urn = explode(" ",$urn);
         $urn = implode("-",$urn);

@@ -30,5 +30,6 @@ Blog
             @endif  
         @endforeach
     </div>
+    {{ $articles->links() }}
 </section>
 @endsection
