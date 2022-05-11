@@ -10,6 +10,7 @@
         })(window,document,'script','dataLayer','GTM-5BK4WMN');
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4546DD83F0"></script>
+    <!-- Global site tag (gtag.js) - Google Ads --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10895158474"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-10895158474'); </script>
     <!-- Google Analytics -->
     <script>
       window.dataLayer = window.dataLayer || [];
