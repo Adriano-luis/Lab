@@ -82,7 +82,7 @@ header ul li a{
 }
 
 #blog {
-    height: 66rem;
+    height: 75rem;
 }
 
 #first{
@@ -184,21 +184,21 @@ header ul li a{
 
 #blog .container div.two-articles .half{
     position: absolute;
-    top: 147.4rem;
+    top: 151.4rem;
     right: 23.8rem;
     z-index: 2;
 }
 
 #blog .container div.two-articles .circle{
     position: absolute;
-    top: 165rem;
+    top: 169rem;
     right: 15.4rem;
     z-index: 2;
 }
 
 #blog .container div.two-articles .circle-yellow{
     position: absolute;
-    top: 126.3rem;
+    top: 130.3rem;
     right: -9.4rem;
     z-index: 2;
 }
@@ -207,7 +207,7 @@ header ul li a{
     position: absolute;
     width: 24rem;
     height: 34rem;
-    top: 147.6rem;
+    top: 153.6rem;
     right: 0rem;
     z-index: 1;
     background-color: #FFF;
@@ -230,6 +230,10 @@ header ul li a{
 #blog .container article{
     width: 100%;
     max-width: 17rem;
+}
+
+#blogs{
+    height: 115rem;
 }
 
 #blogs .blogs-main article{
@@ -255,7 +259,7 @@ header ul li a{
     border-radius: 1rem 5rem 0 0;
 }
 
-#blogs ul li a{
+#blogs article ul li a{
     color: #FF62E9;
     text-decoration: none;
 }
@@ -321,7 +325,7 @@ header ul li a{
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 60rem;
+    height: 64rem;
     margin-top: 100vh;
     background-color: #fff;
 }
@@ -641,7 +645,7 @@ header ul li a{
     }
 
     #blog {
-        height: 77rem;
+        height: 110rem;
     }
 
     #blog .container .two-articles,
@@ -662,6 +666,10 @@ header ul li a{
     #blog .container div.two-articles article,
     #blog .container .four-articles article{
         margin-bottom: 1rem;
+    }
+
+    #blog .container .four-articles article {
+        margin-right: 3rem;
     }
 
     #blog .container div.two-articles .circle {
@@ -698,7 +706,7 @@ header ul li a{
     }
 
     #services {
-        height: 205rem;
+        height: 217rem;
     }
     
     #services .container {
@@ -715,7 +723,7 @@ header ul li a{
     }
 
     #about {
-        height: 61rem;
+        height: 65rem;
     }
 
     #about .container p {
@@ -726,13 +734,17 @@ header ul li a{
         padding-left: 0rem;
     }
 
+    #blog .container .four-articles article {
+        margin-right: 3rem;
+    }
+
     #about .container p{
         text-align: center;
         text-justify: justify;
     }
 
     #blog {
-        height: 138rem;
+        height: 195rem;
     }
 
     #blog .container .two-articles,
@@ -816,6 +828,10 @@ header ul li a{
     #contact,
     #blogs{
         max-width: 100%;
+    }
+
+    #blogs{
+        height: 260rem;
     }
 
     #contact .middle,
