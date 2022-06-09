@@ -123,7 +123,7 @@ class BlogController extends Controller
             'image' => 'file|mimes:png,jpg,jpeg',
             'text' => 'required',
             'author' => 'required',
-            'urn' => 'unique:blogs,urn'
+            'urn' => 'unique:blogs,urn,'.$blog->id
         ];
         $feedback = [
             'required' => 'Você esqueceu de me preencher!',
@@ -147,7 +147,6 @@ class BlogController extends Controller
         $request->validate($rules,$feedback);
         $request->input('useAuthor') == 'on' ? $author = auth::user()->name : $author = $request->author;
         $request->input('active') == 'on' ? $active = '1' : $active = '0';
-        dd($request);
         $urn = $request->urn;
         $urn = explode(" ",$urn);
         $urn = implode("-",$urn);
